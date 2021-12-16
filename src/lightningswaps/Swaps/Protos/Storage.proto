@@ -1,0 +1,55 @@
+syntax = "proto3";
+
+package storage;
+
+message RefundableFee {
+    uint64 id = 1; // unique id that will be used as primary key
+    string currency = 2; // currency that was used to pay this fee.
+    int64 initialAmount = 3; // amount in currency how much was paid.
+    bytes paymentHash = 4; // rHash that was used to pay the fee
+    enum State {
+        PAID = 0;
+        REFUNDED = 1;
+    }
+    State state = 5; // state of fee payment
+    int64 timestamp = 6; // timestamp of fee payment in secs from epoch
+    string pairId = 7;
+    bool is_buy = 8;
+    enum Type {
+        ORDER_FEE = 0;
+        CHANNEL_RENTAL_FEE = 1;
+        CHANNEL_EXTEND_FEE = 2;
+    }
+    Type type = 9;
+}
+
+enum ChannelType {
+    LND = 0;
+    CONNEXT = 1;
+}
+
+message RentedChannel {
+    uint64 id = 1; // unique id that will be used as primary key
+    string channelId = 2; // id that is provided by orderbook to access channel status
+    string currency = 3; // currency where channel will be opened
+    int64 capacity = 4; // capacity of channel, denominated in sats
+    int64 rentingDate = 5; // renting date in secs from epoch
+    string channelStatus = 6; // channel status
+    int64 expiresAt = 7; // timestamp of last known expiration.
+
+    ChannelType type = 8; // channel type
+    
+    oneof details {
+      LndChannelDetails lndDetails = 9;
+      ConnextChannelDetails connextDetails = 10;
+   }
+}
+
+message LndChannelDetails {
+    string fundingOutpoint = 1; 
+}
+
+message ConnextChannelDetails {
+    string channelAddress = 1;
+}
+

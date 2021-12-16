@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/connext">
+        <file>web/asset-manifest.json</file>
+        <file>web/connext.js</file>
+        <file>web/index.html</file>
+        <file>web/manifest.json</file>
+        <file>web/qwebchannel.js</file>
+        <file>web/robots.txt</file>
+        <file>web/static/js/runtime-main.d4fcefc8.js</file>
+        <file>web/static/js/runtime-main.d4fcefc8.js.map</file>
+        <file>web/static/js/2.1db40cc0.chunk.js.map</file>
+        <file>web/static/js/2.1db40cc0.chunk.js.LICENSE.txt</file>
+        <file>web/static/js/2.1db40cc0.chunk.js</file>
+        <file>web/static/js/main.1c7aed2f.chunk.js.map</file>
+        <file>web/static/js/main.1c7aed2f.chunk.js</file>
+    </qresource>
+</RCC>

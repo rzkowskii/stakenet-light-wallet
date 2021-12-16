@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package lndtypes;
+
+enum LightningPaymentReason {
+    UNKNOWN_PAYMENT_REASON = 0;
+    PAYMENT_PAYMENT = 1;
+    PAYMENT_SWAP_PAYMENT = 2;
+    PAYMENT_RENTAL = 3;
+    PAYMENT_RENTAL_EXTENSION = 4;
+    PAYMENT_ORDERBOOK_FEE = 5;
+}
+
+enum LightingInvoiceReason {
+    UNKNOWN_INVOICE_REASON = 0;
+    INVOICE_PAYMENT = 1;
+    INVOICE_SWAP_PAYMENT = 2;
+    INVOICE_REFUND_FEE = 3;
+}

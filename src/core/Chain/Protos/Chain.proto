@@ -1,0 +1,213 @@
+syntax = "proto3";
+
+package chain;
+
+import "LndTypes.proto";
+
+message TxOutpoint {
+    string hash = 1; // tx hash
+    uint32 index = 2; // output index
+}
+
+message TxOutput {
+    string address = 1; // output script in form of address
+    uint32 index = 2; // output index
+    int64 value = 3; // output value
+}
+
+message OnChainTransaction {
+    string id = 1; // txid
+    string block_hash = 2; // block hash
+    int64 block_height = 3; // block height
+    uint32 index = 4; // index in block
+    int64 timestamp = 5; // meant to be ms from epoch
+    uint32 flags = 6;
+    repeated TxOutpoint inputs = 7; // inputs
+    repeated TxOutput outputs = 8; // outputs
+    int64 fee = 9; // fee for this transaction
+
+    enum TxType {
+        UNKNOWN_TX_TYPE = 0;
+        PAYMENT = 1;
+        OPEN_CHANNEL = 2;
+        CLOSE_CHANNEL = 3;
+    }
+
+    TxType type = 10; // transaction type
+    map<string, string> memo = 11; // extra memo that can be used to record some info about transaction.
+    string hexRawTransaction = 12;
+}
+
+message EthOnChainTransaction {
+    string id = 1; // txid
+    bytes block_hash = 2; // block hash(constructed from hex)
+    int64 block_height = 3; // block height
+    bytes from = 4; // 20 bytes address of the sender(constructed from hex)
+    bytes to = 5; // 20 bytes address of the receiver(constructed from hex)
+    int64 timestamp = 6; // meant to be ms from epoch
+    bytes gasused = 7; // gas used in bytes(constructed from hex)
+    bytes gasprice = 8; // gas price in bytes(constructed from hex)
+    bytes value = 9; // transaction value in WEI(constructed from hex)
+    bytes input = 10; // transaction data(constructed from hex)
+    int64 nonce = 11; // transaction nonce
+    map<string, string> memo = 12; // extra memo that can be used to record some info about transaction.
+
+    enum EthTxType {
+        SEND_TX_TYPE = 0;
+        RECV_TX_TYPE = 1;
+        PAYMENT_TO_MYSELF_TX_TYPE = 2;
+        DEPOSIT_CHANNEL = 3;
+    }
+
+    EthTxType type = 13;
+}
+
+message LightningPayment {
+    /// The payment hash
+    string payment_hash = 1;
+    int64 value = 2;
+    int64 fee = 3;
+    int64 timestamp = 4;
+
+    enum PaymentStatus {
+        UNKNOWN = 0;
+        IN_FLIGHT = 1;
+        SUCCEEDED = 2;
+        FAILED = 3;
+    }
+
+    // The status of the payment.
+    PaymentStatus status = 5;
+
+    /**
+    The creation index of this payment. Each payment can be uniquely identified
+    by this index, which may not strictly increment by 1 for payments made in
+    older versions of lnd.
+    */
+    uint64 payment_index = 6;
+
+    PaymentFailureReason failure_reason = 7;
+
+    lndtypes.LightningPaymentReason type = 8; // transaction type
+    map<string, string> memo = 9; // extra memo that can be used to record some info about transaction.
+}
+
+message LightningInvoice {
+    /**
+    An optional memo to attach along with the invoice. Used for record keeping
+    purposes for the invoice's creator, and will also be set in the description
+    field of the encoded payment request if the description_hash field is not
+    being used.
+    */
+    map<string, string> memo = 1;
+
+    /**
+    The hash of the preimage.
+    */
+    bytes r_hash = 2;
+
+    /**
+    The value of this invoice in satoshis
+    */
+    int64 value = 3;
+
+    int64 creation_timestamp = 4;
+    int64 settle_timestamp = 5;
+    int64 expiry = 6; // expiry of invoice in seconds
+    uint64 add_index = 7;
+    uint64 settle_index = 8;
+    int64 amt_paid = 9;
+
+    enum InvoiceState {
+        OPEN = 0;
+        SETTLED = 1;
+        CANCELED = 2;
+        ACCEPTED = 3;
+    }
+
+    InvoiceState state = 10;
+
+    lndtypes.LightingInvoiceReason type = 11;
+}
+
+message ConnextPayment {
+    string transferId = 1;
+    string channelAddress = 2; // hex value with 0x
+    bytes value = 3; // value in WEI(constructed from hex)
+    bytes fee = 4; //value in WEI(constructed from hex)
+    int64 timestamp = 5;
+
+    // The type of the payment.
+        enum ConnextPaymentType {
+        SEND = 0;
+        RECEIVE = 1;
+    }
+    ConnextPaymentType type = 6;
+    map<string, string> memo = 7; // extra memo that can be used to record some info about transaction.
+}
+
+message Transaction {
+    uint32 asset_id = 1; // asset id
+    oneof transaction {
+        OnChainTransaction onchain_tx = 2;
+        LightningPayment lightning_payment = 3;
+        LightningInvoice lightning_invoice = 4;
+        EthOnChainTransaction ethonchain_tx = 5;
+        ConnextPayment connext_payment = 6;
+    }
+}
+
+enum PaymentFailureReason {
+    /**
+    Payment isn't failed (yet).
+    */
+    FAILURE_REASON_NONE = 0;
+
+    /**
+    There are more routes to try, but the payment timeout was exceeded.
+    */
+    FAILURE_REASON_TIMEOUT = 1;
+
+    /**
+    All possible routes were tried and failed permanently. Or were no
+    routes to the destination at all.
+    */
+    FAILURE_REASON_NO_ROUTE = 2;
+
+    /**
+    A non-recoverable error has occured.
+    */
+    FAILURE_REASON_ERROR = 3;
+
+    /**
+    Payment details incorrect (unknown hash, invalid amt or
+    invalid final cltv delta)
+    */
+    FAILURE_REASON_INCORRECT_PAYMENT_DETAILS = 4;
+
+    /**
+    Insufficient local balance.
+    */
+    FAILURE_REASON_INSUFFICIENT_BALANCE = 5;
+}
+
+message EthAccount {
+    /**
+    Hex encoded address of eth account.
+    */
+    string address = 1;
+    /**
+    Current nonce of account
+    */
+    bytes nonce = 2;
+    /**
+    Current cached balance of this account
+    */
+    bytes balance = 3;
+}
+
+message EthToken {
+    string token_address = 1;
+    bytes balance = 2;
+    int64 update_height = 3;
+}

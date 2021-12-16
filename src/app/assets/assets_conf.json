@@ -1,0 +1,364 @@
+[
+   {
+      "id":384,
+      "name":"Stakenet",
+      "symbol":"XSN",
+      "misc":{
+         "color":"#2541EF",
+         "explorerLink":"https://xsnexplorer.io/transactions/%1",
+         "officialLink":"https://stakenet.io/",
+         "redditLink":"https://www.reddit.com/r/StakeNet/",
+         "twitterLink":"https://twitter.com/xsnofficial",
+         "telegramLink":"https://t.me/joinchat/BdGxxw-s3b4_DdBdbChI4g",
+         "isAlwaysActive":true,
+         "defaultAddressType":"P2WPKH",
+         "confirmationsForApproved":3,
+         "rescanStartHash":"d668b9328c4b310ecba2e2a5a4e57f92a28be0ae0b402837bc0c377abeb3a335",
+         "averageSycBlockForSec":15396,
+         "coinDescription":"XSN is programmable digital money. It is the native cryptocurrency of Stakenet and powers its decentralized applications. XSN is digital money with instant, infinitely scalable transactions, and near zero fees over Lightning Network.",
+         "averageTxSize": 380
+      },
+      "lnd":{
+         "minChannelCapacity":60000,
+         "maxChannelCapacity":20000000000000,
+         "minPaymentAmount":10000,
+         "maxPaymentAmount":15000000000000,
+         "defaultSatsPerByte" :1,
+         "blocksForEstimateFee":30,
+         "confirmationForChannelApproved":3,
+         "rentalChannelsPerCoin":1,
+         "autopilotDefaultAllocation": 0.5,
+         "autopilotDefaultMaxChannels": 1
+      },
+      "chainparams":{
+         "type": "utxo",
+         "extCoinType":384,
+         "base58Prefix":{
+            "pubkeyAddress":[
+               76
+            ],
+            "scriptAddress":[
+               16
+            ],
+            "secretKey":[
+               204
+            ],
+            "extPublicKey":[
+               4,
+               136,
+               178,
+               30
+            ],
+            "extSecretKey":[
+               4,
+               136,
+               173,
+               228
+            ]
+         },
+         "bech32_hrp":"xc"
+      }
+   },
+   {
+      "id":0,
+      "name":"Bitcoin",
+      "symbol":"BTC",
+      "misc":{
+         "color":"#f7931a",
+         "explorerLink":"https://blockstream.info/tx/%1",
+         "officialLink":"https://bitcoin.org/en",
+         "redditLink":"https://www.reddit.com/r/Bitcoin",
+         "twitterLink":"",
+         "telegramLink":"",
+         "isAlwaysActive":true,
+         "defaultAddressType":"P2WPKH",
+         "confirmationsForApproved":2,
+         "rescanStartHash":"000000000000000000092a235e2bdc53c14b8a71c18b1f2b393d728f2962c5fa",
+         "averageSycBlockForSec":1750,
+         "coinDescription":"The cryptocurrency that started it all, Bitcoin is the first digital currency to solve the \"double spending\" or counterfeiting problem without the aid of a central authority, such as a bank or a government, making Bitcoin truly peer-to-peer.",
+         "averageTxSize": 530
+      },
+      "lnd":{
+         "minChannelCapacity":50000,
+         "maxChannelCapacity":130000000,
+         "minPaymentAmount":10000,
+         "maxPaymentAmount":100000000,
+         "defaultSatsPerByte" :42,
+         "blocksForEstimateFee":3,
+         "confirmationForChannelApproved":2,
+         "rentalChannelsPerCoin":1,
+         "autopilotDefaultAllocation": 0.5,
+         "autopilotDefaultMaxChannels": 1
+      },
+      "chainparams":{
+         "type": "utxo",
+         "extCoinType":0,
+         "base58Prefix":{
+            "pubkeyAddress":[
+               0
+            ],
+            "scriptAddress":[
+               5
+            ],
+            "secretKey":[
+               128
+            ],
+            "extPublicKey":[
+               4,
+               136,
+               178,
+               30
+            ],
+            "extSecretKey":[
+               4,
+               136,
+               173,
+               228
+            ]
+         },
+         "bech32_hrp":"bc"
+      }
+   },
+   {
+      "id":2,
+      "name":"Litecoin",
+      "symbol":"LTC",
+      "misc":{
+         "color":"#BDBDBD",
+         "explorerLink":"https://live.blockcypher.com/ltc/tx/%1",
+         "officialLink":"https://litecoin.com/en/",
+         "redditLink":"https://www.reddit.com/r/litecoin/",
+         "twitterLink":"https://twitter.com/LitecoinProject",
+         "telegramLink":"",
+         "isAlwaysActive":true,
+         "defaultAddressType":"P2WPKH",
+         "confirmationsForApproved":3,
+         "rescanStartHash":"a33a9133c3e0fffa066be05030a56cf4cc938d4f0ece86e358b586949aff4b7f",
+         "averageSycBlockForSec":32756,
+         "coinDescription":"Litecoin is a cryptocurrency similar to Bitcoin. The goal of Litecoin is to provide fast transaction confirmations. Created by ex-Google employee Charlie Lee, Litecoin is often considered the silver to Bitcoin's gold.",
+         "averageTxSize": 250
+      },
+      "lnd":{
+         "minChannelCapacity":275000,
+         "maxChannelCapacity":20000000000,
+         "minPaymentAmount":10000,
+         "maxPaymentAmount":15000000000,
+         "defaultSatsPerByte" :1,
+         "blocksForEstimateFee":3,
+         "confirmationForChannelApproved":3,
+         "rentalChannelsPerCoin":1,
+         "autopilotDefaultAllocation": 0.5,
+         "autopilotDefaultMaxChannels": 1
+      },
+      "chainparams":{
+         "type": "utxo",
+         "extCoinType":2,
+         "base58Prefix":{
+            "pubkeyAddress":[
+               48
+            ],
+            "scriptAddress":[
+               5
+            ],
+            "secretKey":[
+               176
+            ],
+            "extPublicKey":[
+               4,
+               136,
+               178,
+               30
+            ],
+            "extSecretKey":[
+               4,
+               136,
+               173,
+               228
+            ]
+         },
+         "bech32_hrp":"ltc"
+      }
+   },
+   {
+      "id":60,
+      "name":"Ethereum",
+      "symbol":"ETH",
+      "misc":{
+         "color":"#8A1BEF",
+         "explorerLink":"https://etherscan.io/tx/%1",
+         "officialLink":"https://ethereum.org/en/",
+         "redditLink":"https://www.reddit.com/r/ethereum/",
+         "twitterLink":"https://twitter.com/ethereum",
+         "telegramLink":"",
+         "isAlwaysActive":true,
+         "defaultAddressType":"P2WPKH",
+         "confirmationsForApproved":3,
+         "rescanStartHash":"a33a9133c3e0fffa066be05030a56cf4cc938d4f0ece86e358b586949aff4b7f",
+         "averageSycBlockForSec":32756,
+         "coinDescription":"Ethereum is a decentralized computing platform that runs smart contracts, which are contracts that execute without human intervention. ETH popularized the idea of using the blockchain for programmable transactions instead of only for money transfers.",
+         "averageTxSize": 250
+      },
+      "connext":{
+      "tokenAddress": "0x0000000000000000000000000000000000000000"
+      },
+      "chainparams":{
+         "type": "account",
+         "chainId": 1,
+         "extCoinType": 60,
+         "base58Prefix":{
+            "pubkeyAddress":[
+               48
+            ],
+            "scriptAddress":[
+               5
+            ],
+            "secretKey":[
+               176
+            ],
+            "extPublicKey":[
+               4,
+               136,
+               178,
+               30
+            ],
+            "extSecretKey":[
+               4,
+               136,
+               173,
+               228
+            ]
+         },
+         "bech32_hrp":"ltc"
+      },
+      "tokens": [
+        {
+            "id": 1,
+            "name":"Wrapped Ether",
+            "symbol":"WETH",
+            "hidden": true,
+            "contract": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+            "misc":{
+               "color":"#F5AC37",
+               "explorerLink":"https://etherscan.io/tx/%1",
+               "officialLink":"https://makerdao.com/en/",
+               "redditLink":"https://www.reddit.com/r/MakerDAO/",
+               "twitterLink":"https://twitter.com/MakerDAO",
+               "telegramLink":"https://t.me/makerdaoOfficial",
+               "isAlwaysActive":true,
+               "defaultAddressType":"P2WPKH",
+               "confirmationsForApproved":3,
+               "rescanStartHash":"a33a9133c3e0fffa066be05030a56cf4cc938d4f0ece86e358b586949aff4b7f",
+               "averageSycBlockForSec":32756,
+               "coinDescription":"Wrapped Ether (WETH) refers to the ERC-20 compatible version of ether (wrapping ether with other ERC standards is also possible). WETH can be created by sending ether to a smart contract where the ether is placed on hold, in turn receiving the WETH ERC-20 token at a 1:1 ratio. This WETH can afterward be sent back into the same smart contract to be “unwrapped” or redeemed back for the original ether at a 1:1 ratio.",
+               "averageTxSize": 250
+            },
+            "connext":{
+            "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+            }
+        },
+        {
+            "id": 2,
+            "name":"USD Tether",
+            "symbol":"USDT",
+            "contract": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+            "decimals": 6,
+            "misc":{
+               "color":"#26a17b",
+               "explorerLink":"https://etherscan.io/tx/%1",
+               "officialLink":"https://tether.to/",
+               "redditLink":"https://www.reddit.com/r/Tether/",
+               "twitterLink":"https://twitter.com/tether_to",
+               "telegramLink":"",
+               "isAlwaysActive":true,
+               "defaultAddressType":"P2WPKH",
+               "confirmationsForApproved":3,
+               "rescanStartHash":"a33a9133c3e0fffa066be05030a56cf4cc938d4f0ece86e358b586949aff4b7f",
+               "averageSycBlockForSec":32756,
+               "coinDescription":"Tether is a cryptocurrency with tokens issued by Tether Limited.",
+               "averageTxSize": 250
+            },
+            "connext":{
+            "tokenAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7"
+            }
+        },
+        {
+            "id": 3,
+            "name":"USD Coin",
+            "symbol":"USDC",
+            "contract": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+            "decimals": 6,
+            "misc":{
+               "color":"#26a17b",
+               "explorerLink":"https://etherscan.io/tx/%1",
+               "officialLink":"https://www.centre.io/usdc",
+               "redditLink":"https://www.reddit.com/r/USDC/",
+               "twitterLink":"https://twitter.com/centre_io",
+               "telegramLink":"",
+               "isAlwaysActive":true,
+               "defaultAddressType":"P2WPKH",
+               "confirmationsForApproved":3,
+               "rescanStartHash":"a33a9133c3e0fffa066be05030a56cf4cc938d4f0ece86e358b586949aff4b7f",
+               "averageSycBlockForSec":32756,
+               "coinDescription":"A stablecoin brought to you by Circle and Coinbase.",
+               "averageTxSize": 250
+            },
+            "connext":{
+            "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
+            }
+        }
+      ]
+   },
+   {
+      "id": 88,
+      "name":"Ethereum Rinkeby",
+      "symbol":"rETH",
+      "hidden": true,
+      "misc":{
+         "color":"#8A1BEF",
+         "explorerLink":"https://ropsten.etherscan.io/tx/%1",
+         "officialLink":"https://ethereum.org/en/",
+         "redditLink":"https://www.reddit.com/r/ethereum/",
+         "twitterLink":"https://twitter.com/ethereum",
+         "telegramLink":"",
+         "isAlwaysActive":true,
+         "defaultAddressType":"P2WPKH",
+         "confirmationsForApproved":3,
+         "rescanStartHash":"a33a9133c3e0fffa066be05030a56cf4cc938d4f0ece86e358b586949aff4b7f",
+         "averageSycBlockForSec":32756,
+         "coinDescription":"The Ethereum blockchain has a few test-nets, and 2key Network has a version that operates on the Ropsten test-net. The Ropsten test-net allows blockchain developments to test their work in a live setting, but without the need for real ETH and main-net 2KEY tokens. This offers the ability to consistently tweak 2key Network without facing any serious gas fees or risking main-net 2KEY.",
+         "averageTxSize": 250
+      },
+      "connext":{
+         "tokenAddress": "0x0000000000000000000000000000000000000000"
+      },
+      "chainparams":{
+         "type": "account",
+         "chainId": 4,
+         "extCoinType": 88,
+         "base58Prefix":{
+            "pubkeyAddress":[
+               48
+            ],
+            "scriptAddress":[
+               5
+            ],
+            "secretKey":[
+               176
+            ],
+            "extPublicKey":[
+               4,
+               136,
+               178,
+               30
+            ],
+            "extSecretKey":[
+               4,
+               136,
+               173,
+               228
+            ]
+         },
+         "bech32_hrp":"ltc"
+      }
+    }
+]

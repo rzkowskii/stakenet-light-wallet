@@ -1,0 +1,33 @@
+#include <LssdConfig.hpp>
+#include <Utils/Utils.hpp>
+
+//==============================================================================
+
+extern const char LSSD_GIT_SHA1_BUILD[] = "@GIT_SHA1@";
+
+const unsigned int LSSD_MAJOR_VERSION = @lssd_VERSION_MAJOR@;
+const unsigned int LSSD_MINOR_VERSION = @lssd_VERSION_MINOR@;
+const unsigned int LSSD_PATCH_VERSION = @lssd_VERSION_PATCH@;
+const unsigned int LSSD_TWEAK_VERSION = @lssd_VERSION_TWEAK@;
+
+//==============================================================================
+
+QString LssdVersion()
+{
+    return VersionUtils::FormatAsString(LSSD_MAJOR_VERSION,
+                                        LSSD_MINOR_VERSION,
+                                        LSSD_PATCH_VERSION,
+                                        LSSD_TWEAK_VERSION);
+}
+
+//==============================================================================
+
+unsigned int LssdNumericVersion()
+{
+    return VersionUtils::FormatAsNumber(LSSD_MAJOR_VERSION,
+                                        LSSD_MINOR_VERSION,
+                                        LSSD_PATCH_VERSION,
+                                        LSSD_TWEAK_VERSION);
+}
+
+//==============================================================================

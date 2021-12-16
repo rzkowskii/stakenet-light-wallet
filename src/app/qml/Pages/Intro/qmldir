@@ -1,0 +1,14 @@
+module Intro
+BackupLaterComponent 1.0 BackupLaterComponent.qml
+BackupWalletComponent 1.0 BackupWalletComponent.qml
+CreatingWalletComponent 1.0 CreatingWalletComponent.qml
+ErrorComponent 1.0 ErrorComponent.qml
+GetStartedPageComponent 1.0 GetStartedPageComponent.qml
+IntroScreen 1.0 IntroScreen.qml
+MainIntroPageComponent 1.0 MainIntroPageComponent.qml
+RestoreFromBackupComponent 1.0 RestoreFromBackupComponent.qml
+RestoringWalletComponent 1.0 RestoringWalletComponent.qml
+SetupNewWalletComponent 1.0 SetupNewWalletComponent.qml
+SuccessfullComponent 1.0 SuccessfullComponent.qml
+VerifyMnemonicComponent 1.0 VerifyMnemonicComponent.qml
+WalletWarningComponent 1.0 WalletWarningComponent.qml

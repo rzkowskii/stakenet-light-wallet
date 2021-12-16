@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package test;
+
+service TestService {
+    rpc UnaryCall (RequestCall) returns (ResponseCall);
+    rpc UnidirectionaStreamingCall (RequestUniStreamingCall) returns (stream ResponseUniStreamingCall);
+    rpc BidirectionalStreamingCall (stream RequestUniStreamingCall) returns (stream ResponseUniStreamingCall);
+}
+
+message RequestCall {
+    string requestId = 1;
+}
+
+message ResponseCall {
+    string requestId = 1;
+}
+
+message RequestUniStreamingCall {
+    string requestId = 1;
+    int32 numberOfEvents = 2;
+}
+
+message ResponseUniStreamingCall {
+    string requestId = 1;
+    int32 eventIndex = 2;
+}
+
+message TestProtoStructure {
+    string data = 1;
+    uint64 id = 2;
+}

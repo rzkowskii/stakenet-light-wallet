@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>3150ADB8-E65C-49C2-BEF2-A8378A939B4D</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ICON/24/CLOSE">
+            <rect id="ICON/24/PLACEHOLDER" fill-opacity="0.2" fill="#D8D8D8" opacity="0" x="0" y="0" width="24" height="24" rx="8"></rect>
+            <rect id="Rectangle" fill="#989DCC" transform="translate(12.000000, 12.000000) rotate(45.000000) translate(-12.000000, -12.000000) " x="11" y="3" width="2" height="18" rx="1"></rect>
+            <rect id="Rectangle-Copy" fill="#989DCC" transform="translate(12.000000, 12.000000) rotate(-45.000000) translate(-12.000000, -12.000000) " x="11" y="3" width="2" height="18" rx="1"></rect>
+        </g>
+    </g>
+</svg>

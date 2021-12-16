@@ -1,0 +1,1659 @@
+[4.4.0] - 2021-12-16
+
+* Wallet
+    * Deployed 0.4.4.0 beta release.
+
+[4.3.8] - 2021-12-10
+
+* Wallet
+    * rental fees increased.
+    * rentals limited to 500$.
+    * changed eth slider logic to work for deposits only.
+    * SSUI hidden for now.
+    * eth hub is now funded - rentals live again.
+
+* Dex
+    * place order limited to 100$.
+    * ltc/btc pair moved to coming soon as per request.
+    * btc on hub should be stable now.
+
+[4.3.7] - 2021-12-09
+
+* Lightning
+    * Small fixes to pathfinding.
+
+[4.3.6] - 2021-12-08
+
+* Wallet
+    * Eth slider fixes.
+
+[4.3.5] - 2021-12-08
+
+* Wallet
+    * Fixed eth slider crash.
+
+* Lightning
+    * Added extended sync for graph state.
+
+[4.3.4] - 2021-12-03
+
+* Wallet
+    * Fixed slider crashes.
+
+* Lightning
+    * Fixed ltc channel closing.
+    * Fixed ltc backend.
+
+* Dex
+    * Fixed place order issue due to wrong fee.
+
+[4.3.3] - 2021-12-01
+
+* Wallet
+    * Fixed crash on startup.
+
+* Lightning
+    * Fixed channel opening.
+
+[4.3.2] - 2021-12-01
+
+* Wallet
+    * Fixed crash on startup.
+
+[4.3.1] - 2021-11-30
+
+* Wallet
+    * Fixed slider.
+    * Fixed orderbook loading issue.
+
+* Lightning
+    * Fixed lnd crashes on start.
+
+[4.3.0] - 2021-11-26
+
+* Wallet
+    * Added functionality to pay connext deployment fees.
+
+* Lightning
+    * Fixed multiple sync issues, uploaded new version.
+    * Fixed issue with historical spend dispatch.
+
+[4.2.9] - 2021-11-12
+
+* Dex
+    * Blured Dex page when swap is in progress.
+    * Fixed issue with mouse area being only few pixels on can receive text.
+
+* Wallet
+    * Added missing icon new Lock wallet menu item.
+    * Fixed typo at changing L2 clients popup.
+    * Added copy button for generate seed page.
+    * On verify seed phrase page highlighting next item after filling current one.
+
+* Lightning
+    * Fixed multiple issues, uploaded new version.
+
+[4.2.8] - 2021-11-08
+
+* Dex
+    * Fixed duplicates in history trades view.
+
+* Wallet
+    * Created new UI for creating wallet and restoring from seed.
+    * Fixed Changelog.
+
+* Lightning
+    * Upgraded to new version.
+    * Fixed open channel issue.
+
+
+[4.2.7] - 2021-11-06
+
+* Dex
+    * Fixed duplicates in history trades view.
+
+* Wallet
+    * Created new UI for creating wallet and restoring from seed.
+
+* Lightning
+    * Upgraded to new version
+
+[4.2.6] - 2021-10-22
+
+* Wallet
+    * Enabled rental extensions for btc,ltc,xsn channels.
+    * Fixed issue with incorrect eth tx amounts.
+    * Fixed warning for unknown error on tx send.
+    * Added connext rental extensions W/O eth as paying currency.
+    * Added transfer timeout to free coins quicker from locked balance in connext.
+    * Fixed missing USD balance in hide balance function.
+    * Added warning message when trying move slider to the left.
+    * Fixed issue with slider when trying to open smaller channel than min capcaity.
+    * Fixed issue on Portfolio tab with percentage column.
+
+* SSUI
+    * Added new trade button after successful swap.
+
+* Dex
+    * Fixed duplicates in history trades view.
+    * Increased time of warning messages being shown at bottom.
+
+* General
+    * Fixed OSX build.
+    * Fixed Linux build.
+
+[4.2.5] - 2021-10-15
+
+* Wallet
+    * Fixed Dex page UI issue with warning message.
+    * Fixed Settings tab issue.
+    * Added estimated channel creation time on popup.
+    * Set predictive option in settings for Dex.
+    * Added tickbox at terms and conditions popup.
+    * Fixed hide balance function.
+    * Added missing texts on "capacity" and" duration" when renting a channel.
+
+[4.2.4] - 2021-10-09
+
+* Wallet
+    * Added ability to pay for rentals in ETH.
+    * Hidden Cloud tab.
+
+* Swaps
+    * Fixed eth swap issues for WIN platform.
+    * Fixed eth swap issues with big amount trades.
+
+[4.2.3] - 2021-09-24
+
+* Wallet
+    * Small UI impovements.
+* Dex
+    Added missing eth to SSUI.
+
+[4.2.2] - 2021-09-15
+
+* Wallet
+    * Added restore button for connext channels.
+    * Small UI impovements.
+    * Fixed issue with deposit on Ethereum.
+    * Fee refund should now work on keysend payments.
+
+* Settings
+    * Fixed typo on Assets tab.
+
+* Dex
+    * Changed BTC/ETH pair to ETH/BTC.
+
+[4.2.1] - 2021-09-03
+
+* Wallet
+    * Fixed problems with buttons overlapping for connext channels.
+    * Fixed issue with redundant message when swapping to channels tab in connext.
+    * Fixed issue with connext channels after turning connext off.
+    * Fixed issue with wrong slider calculations after moving slider more than once.
+    * Fixed issue with wrong capacity of channel when moving slider to 100%.
+
+*Dex
+    * Increased channel reserve for +5k sats for lnd assets.
+
+[4.2.0] - 2021-08-16
+
+* Wallet
+    * Fixed Ltc issue with missing balances.
+    * Fixed sync of Eth based transactions.
+    * Fixed send of Eth based transactions.
+    * Fixed paying currencies list for rentals.
+    * Added retry send button for eth based transcations.
+
+* Dex
+    * Limited swap pairs to BTC/ETH, BTC/XSN, BTC/LTC, LTC/XSN for pre-release builds.
+    * Fixed Eth based swap issues.
+    * Fixed pair status for BTC/ETH.
+    * Fixed market order issues.
+
+* SSUI
+    * Fully refactored SSUI to work with Eth pairs.
+
+* Vortex
+    * Disabled Vortex tab for pre-release builds.
+
+[4.1.36] - 2021-08-04
+
+* Wallet
+    * Added channel rent for connext.
+    * Changed channels storage DB.
+    * Upgraded browser node to latest version.
+    * Fixed issue with withdraw requests.
+
+* Portfolio
+    * Added USDC token support.
+
+* Dex
+    * Added new pairs with USDC.
+
+* SSUI
+    * Added support for connext channels.
+
+[4.1.35] - 2021-06-25
+
+* Wallet
+    * Added Dex refunds.
+
+* Vortex
+    * Updated background for page.
+    
+* Portfolio
+    * Updated title.
+
+* Swap
+    * Added title.
+
+* Dex
+    * Fixed overlapping balances bug.
+
+[4.1.34] - 2021-06-21
+
+* Wallet     
+    * Updated structure of page.
+    * Updated channels view for Connext.
+    * Fixed overlapping bug on wallets list.
+
+* SSUI
+    * Fixed overlapping bug on Confirm swap screen.
+
+[4.1.33] - 2021-06-11
+
+* Wallet
+    * Updated UI.   
+    * Added tool tips on L2 status for colourblind people.
+    * Added closing channel button.
+
+* Dex
+    * Updated UI.
+
+[4.1.32] - 2021-06-04
+
+* Wallet     
+    * Updated UI.
+
+* Dex
+    * Updated UI.
+
+* Bot
+    * Added tooltip for percent view.
+    * Added an additional check for the availability of the order in the two order book sides.
+
+[4.1.31] - 2021-05-28
+
+* Wallet   
+    * Removed transaction link on explorer from channel details popup for channels which have not any confirmations.
+
+* Bot
+    * Updated UI.   
+    * Added fiat values for amounts.
+    * Fixed calculation issues.
+
+[4.1.30] - 2021-05-21
+
+* Bot
+    * Updated UI.
+    * Fixed ui issue after changing trading pair.
+    * Fixed calculation issues with percent bar and balances.
+    * Added 10k sats limit to place every order.
+
+[4.1.29] - 2021-05-18
+
+* Dex
+    * Fixed dex offline bug after restoring wallet.
+    * Fixed updating connext trade status for eth and tokens.
+
+* Wallet
+    * Updated calculation max amount when press Max button on Send ETH popup.
+
+[4.1.28] - 2021-04-12
+
+* Wallet
+    * Changed application environment to staging.
+
+[4.1.27] - 2021-04-09
+
+* Wallet
+    * Added new "failed" status for failed ETH transactions.
+    * Added "Open Connext" button on wallet page to active Connext.
+    * Fixed text overlay bug on Simple Swap page.
+
+[4.1.26] - 2021-03-31
+
+* Wallet
+    * Fixed USDT transactions statuses.
+
+* Connext
+    * Updated browser node to latest version v0.2.1-beta.13.
+
+[4.1.25] - 2021-03-30
+
+* Wallet
+    * Disabled trading pair dropdown when DEX/Simple Swap UI is offline.
+    * Updated Connext node parameters to resolve connectivity issues.
+    * Fixed issue for USDT transactions showing incorrect amount.
+    * Re-enabled fiat currency display for WETH.
+
+[4.1.24] - 2021-03-29
+
+* Connext
+    * Fixed issue preventing new Connext channels being created.
+    * Fixed issue impacting deposits on Connext Layer 2.
+    * Updated bubble notifications.
+
+* Wallet
+    * Updated side menu image for DEX option.
+    * Changed Simple Swap UI channel rental duration to 3 days.
+    * Removed fiat currency balance for WETH temporarily.
+
+[4.1.23] - 2021-03-23
+
+* Wallet
+    * Fixed crash affecting new wallets on seed creation.
+
+[4.1.22] - 2021-03-22
+
+* Dex
+    * Enabled BTC/USDT swap pairing.
+
+* Wallet
+    * Fixed issue where transaction deposit was not confirmed due to not enough gas being used for initial transaction.
+
+[4.1.21] - 2021-03-19
+
+* Connext
+    * Fixed reconcile and channels balances.
+
+[4.1.20] - 2021-03-18
+
+* Wallet
+    * Fixed wallet crash.
+    * Updated the error message when opening a channel to be more descriptive..
+    * Added detailed error message when deposit channel.
+
+[4.1.19] - 2021-03-16
+
+* Wallet
+    * Fixed Lnds syncing.
+    * Updated text on notification when opening channel.
+
+* Connext
+    * Fixed withdraw.
+
+[4.1.18] - 2021-03-15
+
+* Connext
+    * Added browser node support.
+
+* Wallet
+    * Fixed total, on chain and L2 balances on Wallet Page.
+    * Updated Receive popup notification for tokens.
+
+[4.1.17] - 2021-03-05
+
+* Wallet
+    * Fixed fee on send popup.
+    * Fixed bug with sending ETH tx, fixed error message.
+    * Fixed updating connext channel balances.
+    * Fixed reconcile for USD Tether.
+    * Fixed text overlay on SSUI.
+
+[4.1.16] - 2021-02-26
+
+* Wallet
+    * Fixed showing fee on eth transaction details.
+    * Fixed updating assets total balances on ui.
+    * Fixed updating dex status for ETH and tokens.
+
+[4.1.15] - 2021-02-24
+
+* Dex
+    * Fixed dex balances.
+
+* Wallet
+    * Fixed sending for eth and tokens.
+    * Updated error messages for connext.
+
+[4.1.14] - 2021-02-23
+
+* Wallet
+    * Fixed issue with prolonging rental channel.
+    * Added local currency conversion for USDT.
+    * Added error handling during creating eth transaction in send popup.
+
+[4.1.13] - 2021-02-19
+
+* Wallet
+    * Fixed ui connext channel list view.
+    * Fixed connext resolver msg delivery.
+    * Added extra logs to connext channel deposit.
+    * Added extra logs for can send and can receive channel balances.
+
+[4.1.12] - 2021-02-16
+
+* Wallet
+    * Fixed updating connext channels.
+
+[4.1.11] - 2021-02-12
+
+* Dex
+    * Fixed "can send" / "can receive" balances issue.
+    * Fixed dex statuses.
+
+* Wallet
+    * Updated connext Channel details popup UI.
+
+[4.1.10] - 2021-02-10
+
+* Wallet
+    * Fixed orderbook issue.
+    * Fixed issue by switching between wallets.
+
+[4.1.9] - 2021-02-09
+
+* Dex
+    * Fixed pair switching.
+
+* Wallet
+    * Fixed rescan ETH transactions.
+    * Added updating connext balances.
+    * Updated Channel details popup UI.
+    * Updated text messages on Deposit popup screens.
+
+[4.1.8] - 2021-02-05
+
+* Connext
+    * Added feature to fund channel from any wallet.
+    * Fixed opening channel.
+    * Fixed gas calculation.
+    * Added Channel details popup.
+    * Upgraded connext version.
+    * Updated connext channel ui.
+
+* Wallet
+    * Added sending tokens.
+    * Adeded syncing tokens transactions.
+    * Fixed Ethereum transactions syncing.
+
+[4.1.7] - 2021-02-02
+
+* Wallet
+    * Added syncing status for Connext.
+    * Fixed issue to show channels which doesn't have balance.
+
+[4.1.6] - 2021-02-02
+
+* Connext
+    * Fixed initialization of connext node.
+
+[4.1.5] - 2021-02-01
+
+* Wallet
+    * Fixed issue with wallet freezing on win.
+
+[4.1.4] - 2021-01-29
+
+* Wallet
+    * Added connext image creation.
+    * Added connext start/stop.
+    * Added connext channels functionality.
+    * Added connext deposit/withdraw.
+    * Added BTC/USDT pair to DEX.
+    * Added connext channels popus on UI.
+
+[4.1.3] - 2021-01-15
+
+* Wallet
+    * Added password requirements check in settings.
+    * Show password requirements when creating password.
+    * Fixed issue when creating new wallet, seed phrase was not visible.
+
+[4.1.2] - 2021-01-08
+
+* Wallet
+    * Fixed encryption, lock/unlock.
+    * Fixed USTD denominations.
+    * Fixed USTD descriptions.
+    * Fixed ETH currency rates.
+
+[4.1.1] - 2021-01-05
+
+* Wallet
+    * Fixed sending and receiving transaction.
+    * Fixed description text for weth, wrapped ether ropsten.
+    * Fixed opening L2 channel.
+    * Fixed encrypting wallet.
+    * Added USDT token support.
+
+* LSSD
+    * Added connext support to allow l2 swaps on Ethereum network.
+
+[4.1.0] - 2020-12-31
+
+* Wallet
+    * Supported send and receive for ethereum.
+    * Supported chain sync for ethereum.
+    * Added transactions view for ethereum.
+    * Added encryption.
+    * Added lock and unlock.
+
+[4.0.4] - 2020-11-19
+
+* Wallet
+    * Now channels are opened with private flag.
+    * Fixed text when rental channel expired.
+    * Fixed USD fiat prices.
+    * Fixed receive balance on lightning option on Receive popup.
+    * Added copyable txids on Send popup.
+    * Removed deactivation BTC lnd on Deactivation lnds popup.
+    * Unable to close channel while a swap is in progress.
+    * Fixed local prices for assets and turned back all local currencies.
+
+* Lightning
+    * Increased version to 0.11.0.3.
+
+* Swap
+    * Added simple swap page.
+    * Centered bubble popup.
+    * Fixed min/half/max toggle.
+    * Updated message text on swap screen.
+    * Fixed simple swap with opened channels.
+    * Fixed calculating amount when price changed.
+    * Added opening channels on simple swap.
+    * Fixed issue about "can not send balance" when opening channels.
+    * Added automatic retry for failed swaps.
+    * Added new ui screens.
+    * Fixed onChain fee on ui.
+    * Fixed total fee to 2 decimal places.
+    * Added saving last success or failure screen view even if user close the wallet.
+    * Added the ability to change fiat amount.
+    * Refused to use a percentage (120%) and added reserve calculating for channels.
+    * Increased rental channel time from 1 hour to 1 day.
+    * Fixed min/half/max toggle.
+    * Updated text on "In progress" screen when channels are open.
+    * Fixed issue with confirmed balance.
+    * Fixed typo and updated text on "In progress" screen.
+    * Added new "Success" and "Failed" screens.
+
+[4.0.3] - 2020-09-15
+
+* Orderbook
+    * Market orders now are reposting automatically.
+    * Fixed issue with reposting market order as limit when there are no available orders in orderbook.
+
+* Rental
+    * Added native currency to pay for rental channel.
+
+* Dex
+    * Implemented "Dex in maintenance" screen.
+    * Added tooltip for dex balances.
+    * Fixed issue when on TradingView in chart click.
+    * Fixed spam issue with "Confirm" button on placing orders.
+
+* Portfolio
+    * Fixed USD amount when sorting.
+
+* Windows
+    * Added runtime dll for windows builds.
+    * Added more runtime dll to fix windows builds.
+
+* Wallet
+    * Added fiat value of coins.
+    * Added validator to search wallets.
+    * In orderbook UX section in settings added possibility to choose type of tx to display.
+    * Added notification page when new version is available.
+    * Added confirmation popup before downloading updates.
+    * Added confirmation popup before updating.
+    * Fixed can send and can receive balances on pending channels.
+    * Removed "Details" button from tx, changed the opening tx details by one click.
+    * Changed display transactions options in UX orderbook tab.
+    * Copyable tx id on success send popup.
+    * Fixed issue with wrong date for rented channels in popup.
+    * Generated invoice now can be copied from details popup.
+
+* Lightning
+    * Added watchtower support.
+    * Fixed issues with historical spend rescan.
+    * User can now force close channels when "stuck on closing".
+
+[3.9.1] - 2020-08-26
+
+* Updater
+    * Fixed production updates.
+
+[3.9.0] - 2020-08-25
+
+* General
+    * UI improvements.
+
+[3.8.1] - 2020-08-24
+
+* Dex
+    * Added support for zero trading fees.
+
+[3.8.0] - 2020-08-24
+
+* General
+    * Qt upgrade to 5.15.0.
+
+[3.7.2] - 2020-08-21
+
+* Wallet
+    * Added fee rate toggle when opening and closing channels.
+    * Disabled ln network fee rate slider from Settings.
+    * Removed Details button from channel tab.
+
+* Rental
+    * Separated on chain fee and rental fee, changed ui.
+
+* Settings
+    * Removed reset wallet.
+
+[3.7.1] - 2020-08-21
+
+* Updater
+    * Fixed updater URLs.
+
+[3.7.0] - 2020-08-19
+
+* Updater
+    * Fixed new updater URLs.
+
+* Wallet
+    * Fixed issue with not refreshing amount fields after changing invoice.
+    * Removed invoice from confirmation popup for LN payment.
+    * Changed activity and status labels for invoice.
+    * Fixed bug with lightning slider when the user has zero balance.
+
+[3.6.1] - 2020-08-19
+
+* Updater
+    * Updated updater.
+
+[3.6.0] - 2020-08-19
+
+* Updater
+    * Implemented new updating mechanism.
+
+* Wallet
+    * Changed can send and can receive balance on channels excluding locked funds.
+    * Added ability to hide/show balances by clicking on wallet balance.
+
+* Rental
+    * Changed text on rental popup when hub has not enough funds.
+
+[3.5.0] - 2020-08-13
+
+* Wallet
+    * Updated tooltip on slider.
+    * Hided external channel button for rental pending channel.
+    * Changed opening channel details by clicking on channel from double click to one click.
+
+Rental
+    * Changed "Advanced" color when cannot rent channel.
+    * Added preselected currency payment using active LND.
+
+* Settings
+    * Removed the Skins tab.
+
+[3.4.1] - 2020-08-11
+
+* Wallet
+    * Changed ui on Send popup.
+    * Changed slider ui, added tooltip.
+    * Added low, medium and high fee rate options for opening channel.
+
+* Rental
+    * Changed text when payment asset has enough balance to rent channel.
+
+[3.4.0] - 2020-08-10
+
+* Wallet
+    * Changed Send popup ui.
+    * Reduced the width of slider.
+
+* Rental
+    * Changed rental pop up text at bottom to new format.
+    * Added cancel button hovering, changed confirm button color when it disabled.
+
+* Settings
+    * Changed from "Disable" to "Default" option on Orderbook UX settings.
+
+* Dex
+    * Avoid cancelling invoice on swap failure.
+
+[3.3.2] - 2020-08-07
+
+* Wallet
+    * Fixed issue with slider, changed design of open channel slider.
+
+[3.3.1] - 2020-08-07
+
+* Wallet
+    * Added low, medium and high fee rate options for sending on chain transaction.
+
+[3.3.0] - 2020-08-07
+
+* Rental
+    * Added showing min capacity to rent.
+* Wallet
+    * Changed Stakenet icon.
+    * Turned off AP launch when starting wallet.
+    * Changed UI for open channel slider.
+
+[3.2.2] - 2020-08-06
+
+* Wallet
+    * Fixed issue with slider when clicking outside of confirm popup.
+    * Changed color of slider when it's disabled.
+    * Updated text on pages and popups.
+
+[3.2.1] - 2020-08-05
+
+* Wallet
+    * Fixed opening wallet.
+
+[3.2.0] - 2020-08-05
+
+* Wallet
+    * Removed Autopilot. Added slider for opening channels.
+    * Changed text "lnd" to "L2" in all statuses.
+
+* Settings
+    * Changed buttons design on Backup tab.
+
+[3.1.7] - 2020-07-31
+
+* Wallet
+    * Fixed opening wallet.
+
+[3.1.6] - 2020-07-31
+
+* Wallet
+    * Fixed right-click copy/paste context menu.
+* Dex
+    * Fixed pair selection.
+
+[3.1.5] - 2020-07-29
+
+* Wallet
+    * Added tooltips for on chain balance and off chain balance.
+    * Changed the disclaimer to be a main wallet disclaimer.
+
+* Dex
+    * Added reset price when switch pairs.
+
+[3.1.4] - 2020-07-22
+
+* Open channel popup
+    * Fixed typo.
+
+* Dex
+    * Now Dex balances are updating instantly after swap.
+    * Added ability to open channel from dex page when do not have enough local balance.
+    * Added disclaimer popup.
+
+* Rental popup
+    * Changed notification text.
+
+* Channel details popup
+    * Added "open in explorer" option for BTC when tx has 0 confirmations.
+
+* Wallet
+    * Reduced bitcoin num confs to 2.
+    * Fixed issue with outgoing lightning payment being not displayed.
+    * Fixed overlapping of date in channels view.
+
+[3.1.3] - 2020-07-18
+
+* Dex
+    * Fixed bubble popups for "Order submitted" and "Swap success".
+
+[3.1.2] - 2020-07-18
+
+* Dex
+    * Removed processing state for place order button.
+
+[3.1.1] - 2020-07-17
+
+* Wallet
+    * Changed cursor for tooltips.
+
+* Dex
+    * Changed notifications view when no remote balance.
+    * Forbidden to place a new order until the past one is placed.
+
+* Channel details
+    * Changed text in rental pop up details from "rental time " to "Rental time remaining".
+
+* Lightning
+    * Fixed autopilot channel open, after all balance sending to own address.
+
+[3.1.0] - 2020-07-14
+
+* Open channel
+    * Allowed to open the channel using only confirmed balances.
+
+* Wallet
+    * Changed btc confirmations for approved from 3 to 2 confirmations.
+    * Fixed autopilot toogle button.
+
+[3.0.9] - 2020-07-13
+
+* Wallet
+    * Fixed confirmations for pending channels.
+    * Changed notifications on rental popup and rental extension popup.
+
+[3.0.8] - 2020-07-12
+
+* Lightning
+    * Fixed lnd syncing on windows.
+
+[3.0.7] - 2020-07-12
+
+* Wallet
+    * Fixed crash on windows.
+
+[3.0.5] - 2020-07-11
+
+* Wallet
+    * Attempt to fix crash on windows.
+    * Added extra details for crash reporter.
+
+[3.0.4] - 2020-07-10
+
+* Wallet
+    * Returned logo back for loading page.
+    * Fixed issue with restoring from wrong seed.
+    * Changed channels tab in wallet page.
+    * Added tooltip for dex refunds label.
+    * Added crashreporting for windows.
+
+* Dex
+    * Added ability to rent a channel by clicking on notification.
+    * Added the coin need to rent in notification.
+
+* Settings
+    * Added options for can receive balance units.
+
+[3.0.3] - 2020-07-09
+
+* Lightning manager
+    * Added max button for open channel popup.
+    * Fixed typo on open channel popup.
+
+* Software versions
+    * Changed message text when version is up to date.
+
+* Wallet
+    * Changed logo of loading page.
+    * Moved lightning page to wallets tab.
+    * Changed send button background on cursor contains.
+    * Changed tooltip on ln autopilot.
+    * Added support for spending unconfirmed transaction outputs.
+    * Fixed issue with "Missing inputs" that is caused by unconfirmed txns.(CLEAN TX DB REQUIRED)
+
+* Rental
+    * Fixed lnd activating for channel renting.
+
+* Dex
+    * Changed text on notifications.
+
+* LSSD
+    * Added support for orderbook connection status stream.
+    * Added macaroons support.
+
+* Lightning
+    * Added support for macaroon files for extra security.
+    * Allow to subtract fees from channel balance on opening.
+    * Fixed issue with wrong data in channel details popup;
+    * Increased min channel capacity for btc.
+
+[3.0.2] - 2020-07-07
+
+* Dex
+    * Changed Dex status back to orderbook status.
+    * Changed notifications text under amounts.
+    * Added сhannel rental by clicking on 'can receive' balance.
+    * Fixed issue with swap timeout on swap peer side.
+
+* Lightning manager
+    * Changed header from "remaining time" to "rental time".
+
+* Wallet
+    * Added question mark and tooltip for LN autopilot.
+    * Made the landing page after reopening wallet - the last page you visited.
+    * Changed send/receive buttons view.
+    * Added support for parallel chain syncing.
+
+[3.0.1] - 2020-07-03
+
+* Wallet
+    * Added borders for buttons.
+
+* Settings
+    * Changed software versions ui tab.
+
+[3.0.0] - 2020-07-03
+
+* Dex
+    * Fixed local balance issue in DEX.
+
+[2.9.9] - 2020-07-02
+
+* Lssd
+    * Fixed balance calculations.
+    * Added receive balance calculations.
+
+* Dex
+    * Fixed issue with the appearance of the unnecessary order during swaps on open orders tab.
+
+* Wallet
+    * Updated icons.
+
+[2.9.8] - 2020-07-01
+
+* Wallet
+    * Added UI support for conflicted transactions.
+    * Fixed conflicted transactions to be part of UTXO set.
+    * Updated application icon.
+
+* Lightning
+    * Added channel date into channel details popup.
+
+* Dex
+    * Fixed getting the channel balance warning.
+
+[2.9.7] - 2020-06-30
+
+* Rental
+    * Changed pre-selected amount of rental channel to 7 days.
+    * Added labels to rental pop up.
+    * Fixed rental fee on ui.
+
+* Lightning
+    * Added balance checks on open channel.
+
+* Dex
+    * Changed Dex status to actual dex trade pair status.
+
+* Wallet
+    * Attempt to fix double spend transactions.
+
+[2.9.6] - 2020-06-29
+
+* Dex
+    * Fixed swaps with near maximum amounts.
+
+[2.9.5] - 2020-06-29
+
+* Settings
+    * Added extra warning message when resetting wallet.
+    * Added extra warning at seed when seed is visible.
+
+* Wallet
+    * Changed wallet icon for Windows.
+    * Applying changes of fee in settings for all types of payments.
+
+* Lightning
+    * Added fee settings popup to open channel popup.
+
+* Dex
+    * Fixed order reporting after failure.
+    * Fixed renting extra calls.
+
+[2.9.4] - 2020-06-25
+
+* Lightning manager
+    * Added remote balance to all channels lnd balance sum on Lightning manager page.
+
+* Dex
+    * Fixed opening rental channel while user is not connected to hub.
+
+[2.9.3] - 2020-06-23
+
+* Dex
+    * Banned placing orders if the dex status is not online.
+    * Added fade effect on fields and copied orders.
+
+* Lightning
+    * Attemt to fix spawning refund invoices.
+
+[2.9.2] - 2020-06-22
+
+* Lightning
+    * Added tracking of rental fees and rental extend fees.
+
+* Renting
+    * Fixed renting payment issue.
+    * Removed $50 limit for renting.
+
+[2.9.1] - 2020-06-20
+
+* Lightning
+    * Hub modifications done.
+
+[2.9.0] - 2020-06-19
+
+* Wallet
+    * Added fee info to transaction details popup.
+* Dex
+    * Updated combobox.
+
+[2.8.9] - 2020-06-18
+
+* Lightning
+    * Added extra logs to htlc forwarding process.
+
+[2.8.8] - 2020-06-17
+
+* Dex
+    * Fixed inconsistent orderbook trading view.
+    * Fixed UI for my trade history canceled fees.
+* Rental
+    * Added extra logs for renting map<K, V> issue.
+
+[2.8.7] - 2020-06-15
+
+* Wallet
+    * Updated transaction details to work for all tx types.
+* Lightning
+    * Fixed AP dialog closing.
+* Dex
+    * Attempt to fix invalid channels balance.
+
+[2.8.6] - 2020-06-11
+
+* Settings
+    * Added client id to Software version tab.
+* Rental
+    * Added rental extension.
+* Lightning
+    * Fixed timeout on pathfind
+    * Fixed cltv block padding causing incorrect payment details on place order.
+
+[2.8.5] - 2020-06-11
+
+* Dex
+    * Fixed invoice generation to refund fee.
+* Lightning
+    * Added popup when user uses AP for first time.
+
+[2.8.4] - 2020-06-11
+
+* Wallet
+    * Fixed ln error handling.
+
+* Lighnting
+    * Fixed too soon expiry errors for swaps.
+
+[2.8.3] - 2020-06-09
+
+* Lighnting
+    * Fixed issue with invalid CLTV for invoices.
+
+[2.8.2] - 2020-06-08
+
+* Dex
+    * Fixed AMP for trading.
+
+[2.8.1] - 2020-06-06
+
+* Lightning
+    * Fixed btc payment issue when route probability gets lower 10k satoshis.
+    * Fixed reason for unknown swap failures.
+* Dex
+    * Fixed cancel all button for own orders.
+* Wallet
+    * Changed minimum amount for invoices to be 10k sats.
+
+[2.8.0] - 2020-06-05
+
+* Wallet
+    * Updated transactions database to keep track of all transactions.
+    * Added extra states for on-chain and off-chain transactions.
+* Lighnting
+    * Moved off-chain transactions to wallet view.
+* Dex
+    * Changed My trade history to history for selected pair.
+* LSSD
+    * Added xtra checks for available balance based on locked funds.
+
+[2.7.9] - 2020-06-04
+
+* Lightning
+    * Enabled multipath payments.
+    * Enabled fast sync algorithm for graph.
+    * Fixed autopilot low fee channels for ltc/xsn.
+    * Updated error logs.
+* Dex
+    * Fixed can send and receive veryfication.
+* Rental
+    * Increased max channel rent time to 14 days.
+
+[2.7.8] - 2020-06-03
+
+* Wallet
+    * Fixed balance in receive popup to on-chain.
+    * Added lightning balance on receive popup when creating invoice.
+* Lightning
+    * Fixed swap errors.
+    * Fixed listutxos ranges for missing inputs issue.
+    * Temporarily reverted to slower lnd sync algorithm.
+
+* Dex
+    * Added dex status for current swap pair to combo box.
+
+[2.7.7] - 2020-06-02
+
+* Wallet
+    * Added lnd status instead of dex status.
+    * Added confirmation for last pending channel.
+
+[2.7.6] - 2020-06-01
+
+* Dex
+    * Added debug logs.
+    * Increased timeouts for payments.
+    * Fixed remote balance checks.
+
+[2.7.5] - 2020-05-29
+
+* Dex
+    * Fixed missed messages issue.
+    * Fixed orderbook client disconnect.
+
+[2.7.4] - 2020-05-27
+
+*Lightning
+    * Fixed loop crash happened after rentals expiry.
+    * Decreased sync time for windows.
+
+[2.7.3] - 2020-05-23
+
+* Dex
+    * Combined subscribe and refresh orders call into one.
+
+[2.7.2] - 2020-05-22
+
+* Dex
+    * Implemented new API for orderbook orders.
+* LSSD
+    * New API for lssd own and general orders.
+* Lightning
+    * Lnd upgrade.
+    * Autopilot fixes.
+* Rental
+    * Added showing full remaining time on channels details.
+
+[2.7.1] - 2020-05-21
+
+* Rental
+    * Added opening fee to rental fee.
+* Wallet
+    * Fixed enabling ap after changing ap settings.
+
+[2.7.0] - 2020-05-20
+
+* Dex
+    * Added automatic refunding of pending fees.
+* Wallet
+    * Fixed autopilot.
+
+[2.6.9] - 2020-05-19
+
+* Rental
+    * Fixed converting local fee value on rental popup.
+    * Added notification and disabled renting while payment coin lnd is syncing.
+    * Updated time according to singular and plurar forms.
+* LSSD
+    * Fixed cancel partial orders.
+
+[2.6.8] - 2020-05-18
+
+* Lightning
+    * Fixed AP toogle on LN manager page.
+    * Fixed bug when changing Lighnting.
+* Rental channel
+    * Added "payment in" above the rental payment coin selector drop down.
+
+[2.6.7] - 2020-05-16
+
+* Dex
+    * Added logs for invalid place order response.
+
+[2.6.6] - 2020-05-15
+
+* Lightning
+    * Added combobox for public key with remote ip for open channel.
+    * Increased max value for transaction fee to 200 sats/vbyte.
+* Rental channel
+    * Increased max value for channel duration to 7 days.
+    * Fixed showing remaining time.
+    * Removed limit for rental channel count.
+* Autopilot
+    * Added autopilot settings popup on LN manager by click on AP submenu.
+
+[2.6.5] - 2020-05-14
+
+* Dex
+    * Fixed amounts for refundable fees total.
+* Channel details
+    * Changed title when channel is rental.
+* Channel Rental
+    * Added updating remaining time on rental active channels.
+
+[2.6.4] - 2020-05-13
+
+* Wallet
+    * Fixed updater log file location.
+* Lightning
+    * Fixed issue when after wallet close/crash lnd's remain active.
+    * Changed message when lnds switch.
+
+[2.6.3] - 2020-05-12
+
+* LSSD
+    * Fixed order updates when no fee is used.
+* Wallet
+    * UI updates for autopilot.
+    * UI updates for wallet header.
+
+[2.6.2] - 2020-05-11
+
+* LSSD
+    * Changed notifications for orders API.
+
+[2.6.1] - 2020-05-10
+
+* Lightning
+    * Increased payment fee limits.
+
+[2.6.0] - 2020-05-09
+
+* Lightning
+    * Attemt to fix historic rescan for closed channels.
+
+[2.5.9] - 2020-05-08
+
+*Wallet
+    * Fixed updater for OSX.
+    * Changed wallet tab ui.
+*Dex
+    * Implemented support for tracking refundable fees.
+    * Changed minimum order size for 10000 satoshi.
+
+*Renting channel
+        * Added in real time estimator fee.
+
+[2.5.8] - 2020-05-06
+
+*Wallet
+    * Moved ln autopilot and renting channel to updated menu on LN manager page.
+    * Added lnd status on wallet page and navigation from it to LN manager page.
+*Lightning
+    * Fixed displaying backup info after changing dir.
+    * Fixed unclear swap fail error popups.
+    * Added clickable for 'advanced' text on rental popup.
+*Dex
+    * Implemented first version of refundable fees.
+    * Changed locations of swap databases.
+
+[2.5.7] - 2020-05-04
+
+*Wallet
+    * Added fade effect in search bars and when highlighting menu items.
+    * Added confirmations for force closing channels in list channels.
+
+[2.5.6] - 2020-05-01
+
+*Dex
+    * Added notification popup when one coin of pair do not have active channels with the ability to rent сhannel.
+    * New logic for partial orders.
+
+*Lightning
+    * Increased version to 0.10.0.2.
+    * Fixed btc autopilot issue.
+    * Decreased btc graph syncing interval from 2 hours to 10 minutes ( on fresh setup ).
+
+[2.5.5] - 2020-04-30
+
+*Dex
+    * Fixed overlay bug in order book.
+    * Added dex status for every trade pair.
+    * Removed XSN/LTC pair from list.
+
+*Channel Rental
+    * Added rental button on the top lightning manager page.
+    * Implemented new design.
+    * Fixed min and max capacity.
+    * Added extra notifications.
+
+*Lightning
+    * Updated lnd to 0.10.0
+    * Migrated to new db version which modifies the structure of the on-disk representation of payments for the sake of the new MPP payment splitting feature.
+    * A bug was fixed that resulted in change addresses not being picked up doing a full wallet recovery.
+    * Added new grpc version.
+    * Lncli unlock improved to support stdin.
+    * Channel backups are updated now for pending channels also.
+    * A bug that would at times cause persistently high CPU usage fixed.
+    * Now user can choose folder for saving channel backups.
+    * Fixed issue with collapse timestamps in lightning payments.
+
+[2.5.4] - 2020-04-17
+
+*Lightning
+    * Added confirmations for close and force closing channels.
+    * Added rental channel popup.
+*Wallet
+    * Changed number of confirmations for approve transactions from 6 to 3.
+    * Added dex status button.
+    * Replaced opening LN manager to settings gear icon.
+    * Added dex status on coins tab.
+*Menu
+    * Added account balance on menu tab.
+
+[2.5.3] - 2020-04-09
+
+*Wallet
+    * Updating lnd balance instantly.
+*Dex
+    * Added auto loading last selected trade pair.
+*Lightning
+    * Raised payment and channel limits.
+
+[2.5.2] - 2020-04-08
+
+*Wallet
+    * Updated animations.
+*Updater
+    * Updater, self updates support.
+
+[2.5.1] - 2020-04-07
+
+*Wallet
+    * Added selecting to fields on tx details, send, receive, channel details popups.
+    * Changed showing lnd balance.
+    * Updated highlightning menu tabs.
+    * Changed BTC number of confirmations for approval from 6 to 3.
+    * Changed time of popups transactions.
+    * Added transaction for lightning manager tab.
+    * Changed messages for some operations.
+*Lightning
+    * Added confirmations for pending channels on channels view.
+    * Set autopilot funds allocation to 50% of wallet balance.
+*Dex
+    * Updated dex balances and sides view.
+    * Updated no route logs.
+
+[2.5.0] - 2020-04-03
+
+*Lightning
+    * Raised channel and payment limits
+
+[2.4.9] - 2020-04-02
+
+*Wallet
+    * Added updating Lightning history in real time.
+*Dex
+    * Fixed issue with empty orders for ask/bid views.
+
+
+[2.4.8] - 2020-04-01
+
+*Dex
+    * Fixed issue with empty own orders after changing swap pair.
+*Wallet
+    * Changed startup loading component.
+*Settings
+    * Added Orderbook UX tab.
+
+
+[2.4.7] - 2020-03-31
+
+*Dex
+    * Added bubble popup when order submitted.
+    * Added received amount after swap to bubble popup.
+*Wallet
+    * Added fiat amount when opening an invoice.
+    * Changed local balance in one format using local currency code.
+    * Removed fee estimate from ln send popup
+    * Added proper messages for ln payments errors
+
+*Lightning
+    * Fixed autopilot low ranges issue
+    * Lowered btc max dual channel to 25000 satoshis for testing rounds
+
+[2.4.6] - 2020-03-28
+
+*Lightning
+    * Updated opening/closing fee for autopilot btc channels.
+
+[2.4.5] - 2020-03-27
+
+*Lightning
+    * Lower number of confirmations needed for channel opening to 3.
+*Dex
+    * Added ability to copy data from trade history to open order fields.
+    * Added changing side when select order.
+*Wallet
+    * Changed number of confirmations for approval from 6 to 3.
+
+[2.4.4] - 2020-03-26
+
+*Lightning
+    * Fixed autopilot for btc.
+*Dex
+    * Fixed combobox dropdown.
+    * Updated error handling for swaps.
+
+[2.4.3] - 2020-03-25
+
+*Wallet
+    * Added select by mouse feature for all search fields.
+*Dex
+    * Added busy indicator when orders are loading.
+    * Added sum of total and amounts for whole orderbook.
+
+[2.4.2] - 2020-03-24
+
+*Dex
+    * Added incremental fetching for trading orders.
+*Lightning
+    * Changed how commit fees are calculated to enable manual fee lowering.
+*Settings
+    * Added popup for customize channels fee.
+
+[2.4.1] - 2020-03-22
+
+*Dex
+    * Fixed UI overloading on dex page.
+
+[2.4.0] - 2020-03-21
+
+*Dex
+    * Added BTC/LTC trading pair.
+    * Added BTC/XSN trading pair.
+*Wallet
+    * Updated btc configuration.
+*Lightning
+    * Fixed cltv issue for btc.
+    * Uploaded btc builds
+
+[2.3.1] - 2020-03-19
+
+*Wallet
+    * Fixed crash on swap failure.
+
+[2.3.0] - 2020-03-18
+
+*Wallet
+    * Intro screen: added paste menu for seed field when restoring the wallet.
+*Lightning
+    * Fixed autopilot graph syncing
+    * Fixed autopilot preferential attachment scoring
+    * Added new grpc calls support to speed up sync processes
+
+[2.2.8] - 2020-03-16
+
+*Lightning
+    * Implemented extra state for syncing graph.
+    * Fixed UI when lnd is not ready.
+
+[2.2.7] - 2020-03-16
+
+*Wallet
+    * Changed crash report format for windows.
+
+[2.2.6] - 2020-03-14
+
+*Lightning
+    * Fixed issues in lnd for autopilot.
+
+[2.2.5] - 2020-03-13
+
+*Dex
+    * Changed text on fields on market.
+    * Changed view of non-writable fields.
+    * Added focus on fields when change side on market and change order type to market.
+
+[2.2.4] - 2020-03-12
+
+*Dex
+    * Fixed marker orders buy/sell. Fixed crash when order failing.
+*Wallet
+    * Fixed confirmations on channel details popup.
+*Lightning
+        * Fixed issue with channel open (close wallet when chan pending causes no route issue)
+
+[2.2.3] - 2020-03-11
+
+*Dex
+    * Changed how buy market orders are filled and posted.
+    * Added confirmation popups for cancel order and cancel all orders.
+*Lightning
+    * Fixed ltc autopilot issue.
+
+[2.2.2] - 2020-03-10
+
+*Dex
+    * Fixed market orders 0 units issue.
+*Wallet
+    * Updated UI for rescan dialog.
+
+[2.2.1] - 2020-03-09
+
+*Dex
+    * Fixed crash when swap fails.
+
+[2.2.0] - 2020-03-09
+
+*Dex
+    * Fixed placing of partial order for taker/maker.
+    * Implemented market orders.
+
+[2.1.1] - 2020-03-07
+
+*Dex
+    * Fixed placing of partial order after swap success.
+
+[2.1.0] - 2020-03-06
+
+*Wallet
+    * Fixed crash reporting for windows and linux.
+*Lightning
+    * Updated lnds to support new hubs.
+
+[2.0.0] - 2020-03-04
+
+*Dex
+    * Separated buying and selling orders sides by colors.
+    * Updated channel error messages visibility when amount and total fields are empty.
+*Wallet
+    * Fixed message on send and refresh popups.
+*Settings
+    * Fixed typo in bitcoin explanation.
+*Lightning
+    * Added max chan size config support for autopilot.
+    * Fixed chain issues.
+    * Generated new keys for every node.
+    * Fixed ZMQ flooding issue on crash.
+
+[1.12.0] - 2020-03-02
+
+*Wallet:
+    * Changed unconfirmed tx status to pending.
+    * Added number confirmation for approving, when tx is pending.
+    * Fixed private key derivation, enabling opening channels, autopilot, lnd backups.
+    * Changed logging rules for modules.
+
+[1.11.0] - 2020-02-28
+
+*Wallet:
+    * Logs and log levels for many features.
+    * Added auto wallet reset in case of error while creating.
+*Dex:
+    * Minimum orderbook version support.
+    * Fixed swapFailure reporting for swap initiation.
+*Settings
+    * Added copy button for seed, added seed selected and copy by mouse and right click.
+
+[1.10.0] - 2020-02-27
+
+*Dex:
+    * Fixed buy order values and amount after wallet reload.
+*Portfolio:
+    * Fixed account balance when coin have less than 0.01 local balance.
+*Wallet
+    * Added notification popup after wallet restore.
+    * Enabled crash reporting.
+
+[1.9.0] - 2020-02-25
+
+*Lightning:
+    * Fixed restoring LN channels after restoring wallet from seed.
+*Wallet
+    * Added fiat conversion for open channel popup.
+    * Added unit to channel capacity field.
+    * Fixed validator for fiat.
+    * Added confirmation screen for reset wallet.
+
+[1.8.0] - 2020-02-21
+
+*Dex:
+    * Fixed rounding issue for buy orders
+    * Changed Dex page name
+    * Changed dex status color
+    * Added fiat conversion for total
+    * Added fee updates when changing buy/sell
+
+*Lightning:
+    * Added live fee estimator
+    * No route to hub issue fixed
+    * Messaging updated
+
+*Wallet:
+    * Added logging of unhandled exceptions
+    * Changed lnd balance to balance - 1% of channels capacity
+
+[1.7.0] - 2020-02-18
+
+*Settings:
+    * Introduced changelog.
+    * Reorganized application version page.
+*Dex:
+    * Fixed fees for buy orders
+    * Changed how buy orders are placed to the orderbook
+    * Fixed UI for buy orders
+
+[1.6.0] - 2020-02-17
+
+*Wallet:
+   * Show 8 decimal places in UX at all places.
+*Dex:
+   * Fixed issue when hub doesn't open LTC or XSN channel back.
+   * Fixed 100% sell

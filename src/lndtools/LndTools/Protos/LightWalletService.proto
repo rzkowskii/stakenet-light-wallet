@@ -1,0 +1,158 @@
+syntax = "proto3";
+
+import "Common.proto";
+
+package lightwalletrpc;
+
+message GetChainInfoResponse {
+    /// The signature for the given message
+    string bestBlockHash = 1;
+    int32 height = 2;
+}
+
+message GetBlockHeaderRequest {
+    string hash = 1;
+    bool verbose = 2;
+}
+
+message FilterBlockResponse {
+    repeated string transactions = 1;
+}
+
+message BlockFilter {
+    uint32 n = 1;
+    uint64 m = 2;
+    uint32 p = 3;
+    string bytes = 4;
+}
+
+message DumpPrivKeyRequest {
+    string scriptPubKey = 1;
+}
+
+message Utxo {
+    uint32 vout = 1;
+    string txid = 2;
+    int64 value = 3;
+    string scriptPubKey = 4;
+    int64 confirmations = 5;
+}
+
+message ListUtxoResult {
+    repeated Utxo utxos = 1;
+}
+
+message GetLastAddressRequest {
+    bool isChange = 1;
+}
+
+message GetLastAddressResponse {
+    string address = 1;
+}
+
+message ListUtxosRequest {
+    int32 minConf = 1;
+    int32 maxConf = 2;
+    repeated string addresses = 3;
+}
+
+message GenerateRequest {
+    uint32 numBlocks = 1;
+}
+
+message GenerateResponse {
+    repeated string blockHash = 1;
+}
+
+message GetBlockResponse {
+    bytes block = 1;
+}
+
+message GetConfirmedBalanceRequest {
+    int32 confs = 1;
+}
+
+message GetConfirmedBalanceResponse {
+    int64 amount = 1;
+}
+
+message EstimateNetworkFeeRequest {
+    uint64 blocks = 1;
+}
+
+message EstimateNetworkFeeResponse {
+    int64 fee = 1;
+}
+
+message GetRawTransactionResponse {
+    string transactionHex = 1;
+    string blockHash = 2;
+    uint32 blockHeight = 3;
+    uint32 txIndex = 4;
+}
+
+message GetRawTxByIndexRequest {
+    int64 blockNum = 1;
+    uint32 txIndex = 2;
+}
+
+message GetRawTxByIndexResponse {
+    string txHex = 1;
+}
+
+message LoadCacheRequest {
+    uint32 startHeight = 1;
+}
+
+message LoadCacheResponse {
+    bool loaded = 1;
+}
+
+service LightWalletService {
+    /**
+    GetBestBlock returns the highest block known to lightwallet.
+    */
+    rpc GetChainInfo(Empty) returns (GetChainInfoResponse);
+
+    rpc GetBlockHash(Height) returns (BlockHash);
+
+    rpc GetBlock(BlockHash) returns (GetBlockResponse);
+
+    rpc GetBlockHeader(BlockHash) returns (HexEncoded);
+
+    rpc GetBlockHeaderVerbose(BlockHash) returns (BlockHeader);
+
+    rpc GetFilterBlock(BlockHash) returns (FilterBlockResponse);
+
+    rpc GetBlockFilter(BlockHash) returns (BlockFilter);
+
+    rpc GetTxOut(Outpoint) returns (TxOut);
+
+    rpc GetRawTransaction(TxID) returns (GetRawTransactionResponse);
+
+    rpc GetRawTxByIndex(GetRawTxByIndexRequest) returns (GetRawTxByIndexResponse);
+
+    rpc GetLastAddress(GetLastAddressRequest) returns (GetLastAddressResponse);
+
+    rpc ListUtxos(ListUtxosRequest) returns (ListUtxoResult);
+
+    rpc DumpPrivKey(DumpPrivKeyRequest) returns (HexEncoded);
+
+    rpc SendRawTransaction(HexEncoded) returns (TxID);
+
+    rpc GetConfirmedBalance(GetConfirmedBalanceRequest) returns (GetConfirmedBalanceResponse);
+
+    rpc Generate(GenerateRequest) returns (GenerateResponse);
+
+    rpc LoadSecondLayerCache(LoadCacheRequest) returns (LoadCacheResponse);
+
+    rpc FreeSecondLayerCache(Empty) returns (Empty);
+
+    rpc EstimateNetworkFee(EstimateNetworkFeeRequest) returns (EstimateNetworkFeeResponse);
+
+    rpc LockOutpoint(Outpoint) returns (Empty);
+
+    rpc UnlockOutpoint(Outpoint) returns (Empty);
+
+    rpc GetSpendingDetails(Outpoint) returns (GetRawTransactionResponse);
+}

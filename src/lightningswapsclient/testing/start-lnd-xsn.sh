@@ -1,0 +1,2 @@
+#!/bin/bash
+./lnd_xsn --noseedbackup --nobootstrap --no-macaroons --datadir=/tmp/lnd/exchange-b/data --logdir=/tmp/lnd/exchange-b/logs --tlscertpath=/tmp/lnd/exchange-b/tls.cert --tlskeypath=/tmp/lnd/exchange-b/tls.key --rpclisten=localhost:20001 --listen=localhost:8001 --restlisten=9001 --lightwallet.rpchost=localhost:12345 --xsncoin.active --xsncoin.mainnet --xsncoin.node=lightwallet --lightwallet.rpcuser=ross --lightwallet.rpcpass=ross --lightwallet.zmqpubrawheader=tcp://127.0.0.1:23456 --debuglevel=debug --chan-enable-timeout=1m

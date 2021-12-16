@@ -1,0 +1,46 @@
+FROM yuraolex/useful:qt-5.13-ubuntu-16
+
+USER root
+
+RUN apt update && apt install -y --no-install-recommends \
+    wget \
+    automake \
+    libtool \
+    unzip \
+    python \
+    python-dev \
+    libgmp-dev \
+    p7zip-full \
+    libcurl4-openssl-dev \
+    && apt-get -qq clean \
+    && rm -rf /var/lib/apt/lists/* \
+    && wget https://github.com/Kitware/CMake/releases/download/v3.16.3/cmake-3.16.3-Linux-x86_64.sh \
+    && chmod +x cmake-3.16.3-Linux-x86_64.sh \
+    && sudo ./cmake-3.16.3-Linux-x86_64.sh --skip-license --prefix=/usr \
+    && rm cmake-3.16.3-Linux-x86_64.sh \
+    && wget https://www.openssl.org/source/openssl-1.1.1f.tar.gz \
+    && tar xvf openssl-1.1.1f.tar.gz \
+    && cd openssl-1.1.1f \
+    && ./config -Wl,--enable-new-dtags,-rpath,'$(LIBRPATH)' \
+    && make \
+    && make install \
+    && cd .. \
+    && rm -rf openssl* \
+    && ln -sf /usr/local/bin/openssl /usr/bin/openssl \
+    && cd /opt \
+    && wget https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage \
+    && chmod +x linuxdeployqt-continuous-x86_64.AppImage \
+    && ./linuxdeployqt-continuous-x86_64.AppImage --appimage-extract \
+    && ln -s /opt/squashfs-root/AppRun /usr/bin/linuxdeployqt \
+    && ln -s /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1 /usr/lib/x86_64-linux-gnu/libGL.so.1
+
+COPY lightWallet sources
+
+RUN cd sources/depends \
+    && git submodule update --init --recursive . \
+    && mkdir build \
+    && cd build \
+    && cmake -DCMAKE_RELEASE_TYPE=Release -DMODULES_INSTALL_DIR=/opt/modules .. \
+    && make -j2 \
+    && cd ../../../ \
+    && rm -rf sources

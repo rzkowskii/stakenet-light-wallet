@@ -1,0 +1,18 @@
+{
+    "datadir": "exchange-b",
+    "resolverpath": "",
+
+    "btccfg": {
+       "rpclisten": "localhost:20002",
+       "listen": "localhost:20012",
+       "restlisten": "9002",
+       "assetname": "BTC"
+    },
+
+    "ltccfg": {
+        "rpclisten": "localhost:20001",
+        "listen": "localhost:20011",
+        "restlisten": "9001",
+        "assetname": "LTC"
+    }
+}

@@ -1,0 +1,186 @@
+version: 2.1
+orbs:
+  win: circleci/windows@2.2.0
+
+jobs:
+  build-win: 
+    executor:
+      name: win/default
+      size: "medium" 
+      shell: bash
+    steps:
+      - run: |
+          choco install cmake --installargs '"ADD_CMAKE_TO_PATH=System"' \
+          && pip install conan \
+          && conan remote add bintray-x9developers https://api.bintray.com/conan/x9developers/cpp-connan-pkgs \
+          && conan user
+      - checkout
+      - run: |
+          export PATH=/c/Program\ Files/CMake/bin:$PATH \
+          && mkdir -p build \
+          && cd build \
+          && conan install ../src -s compiler.version=15 \
+          && cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -G "Visual Studio 16 2019" -A "x64" -T "v141" ../src \
+          && cmake --build . --config Release --parallel 4
+      - run: |
+          export PATH=/c/Program\ Files/CMake/bin:$PATH \
+          && cd build \
+          && cmake --install . --component lssd \
+          && cmake --install . --component Stakenet
+
+      - run:
+          name: "Prepare artifacts"
+          working_directory: ~/build/package
+          command: |
+            mkdir win \
+            && mv lssd.zip win/ \
+            && mv Stakenet.zip win/ \
+            && mv update win/ \
+            && cp ../../cmake/s3-deploy-update.cmake win/ \
+            && cp ../../deploy/install-tools.sh win/
+
+            # store the app as the job output
+      - persist_to_workspace:
+          root: ~/build/package
+          paths:
+            - win
+
+  build-linux:
+    docker:
+      - image: yuraolex/useful:cpp-connan-ubuntu-16
+    working_directory: ~/project
+    steps:
+      # the docker image uses the root user while the home is /home/user, we need to force the paths
+      - run: mkdir -p /root/.ssh
+      - run: ssh-keyscan -H github.com >> /root/.ssh/known_hosts
+
+      - checkout
+      - run: |
+          conan remote add bintray-x9developers https://api.bintray.com/conan/x9developers/cpp-connan-pkgs \
+          && conan user
+      - run: |
+          mkdir -p build \
+          && cd build \
+          && conan install ../src -s compiler.libcxx=libstdc++11 \
+          && cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ../src \
+          && cmake --build . --parallel 4
+      - run: |
+          cd build \
+          && cmake --install . --component lssd \
+          && cmake --install . --component Stakenet
+
+      # TODO: Use current tag or date instead
+      - run: git rev-parse HEAD > build/package/version
+
+      - run:
+          name: "Prepare artifacts"
+          working_directory: ~/build/package
+          command: |
+            mkdir linux \
+            && mv lssd.zip linux/ \
+            && mv Stakenet.zip linux/ \
+            && mv update linux/ \
+            && cp ../../deploy/install-tools.sh linux/
+            
+
+      # store the app as the job output
+      - persist_to_workspace:
+          root: ~/build/package
+          paths:
+            - linux
+
+  publish-s3-update-staging:
+    docker:
+      - image: yuraolex/useful:cpp-connan-ubuntu-16
+    steps:
+      - attach_workspace:
+          at: /tmp/workspace
+      - run:
+          name: "Deploy to s3 staging"
+          working-working_directory: /tmp/workspace
+          command: |
+            ./install-tools.sh \
+            && find . -maxdepth 1 ! -path . -type d -execdir sh -c 'DIR_NAME=$(basename $1); cd $(realpath $1); cmake -DDEPLOY_ENV="staging" -DPLATFORM="${DIR_NAME}" -DUPDATE_DIR=update/${CIRCLE_SHA1} -DAWS2_HINT_PATH=$PWD/../tools/bin -P s3-deploy-update.cmake' sh {} ';'
+
+  publish-s3-update-production:
+    docker:
+      - image: yuraolex/useful:cpp-connan-ubuntu-16
+    steps:
+      - attach_workspace:
+          at: /tmp/workspace
+      - run:
+          name: "Deploy to s3 production"
+          working-working_directory: /tmp/workspace
+          command: |
+            ./install-tools.sh \
+            && find . -maxdepth 1 ! -path . -type d -execdir sh -c 'DIR_NAME=$(basename $1); cd $(realpath $1); cmake -DDEPLOY_ENV="production" -DPLATFORM="${DIR_NAME}" -DUPDATE_DIR=update/${CIRCLE_SHA1} -DAWS2_HINT_PATH=$PWD/../tools/bin -P s3-deploy-update.cmake' sh {} ';'
+
+
+# cmake -DDEPLOY_ENV="production" \
+#          -DPLATFORM="linux" \
+#          -DUPDATE_DIR=update/$CIRCLE_SHA1 \
+#          -DAWS2_HINT_PATH=$PWD/tools/bin \
+#          -P s3-deploy-update.cmake
+
+  publish-github-staging:
+    docker:
+      - image: cibuilds/github:0.10
+    steps:
+      - attach_workspace:
+          at: ./artifacts
+
+      # TODO: Use current tag or date instead for the version
+      - run:
+          name: "Publish Staging Release on GitHub"
+          command: |
+            VERSION=latest
+            ghr -t ${GITHUB_TOKEN} -u X9Developers -r xsn-wallet -c master -replace ${VERSION} ./artifacts
+
+  publish-github-release:
+    docker:
+      - image: cibuilds/github:0.10
+    steps:
+      - attach_workspace:
+          at: ./artifacts
+
+      # TODO: Use current tag or date instead for the version
+      - run:
+          name: "Publish Release on GitHub"
+          command: |
+            VERSION=latest
+            ghr -t ${GITHUB_TOKEN} -u X9Developers -r DexAPI -c master -replace ${VERSION} ./artifacts/lssd.zip
+
+workflows:
+  version: 2
+  build_and_publish:
+    jobs:
+      - build-linux:
+          filters:
+            branches:
+              only:
+              #  - master
+                - blablabla
+      - build-win:
+          filters:
+            branches:
+              only:
+                - blablabla
+      #- publish-s3-update-staging:
+      #    requires:
+      #      - build-win
+      #      - build-linux
+      #    filters:
+      #      branches:
+      #        only: develop
+      # - publish-s3-update-production:
+      #     requires:
+      #       - build-linux
+      #     filters:
+      #       branches:
+      #         only: master
+      # - publish-github-release:
+      #     requires:
+      #       - build-linux
+      #     filters:
+      #       branches:
+      #         only: master

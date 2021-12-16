@@ -1,0 +1,414 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="443" height="199" viewBox="0 0 443 199">
+    <defs>
+        <circle id="qyq14g24vj" cx="33.5" cy="20.5" r="2.5"/>
+        <circle id="tbof3etjal" cx="2.5" cy="2.5" r="2.5"/>
+        <circle id="95z3r49yim" cx="55.5" cy="33.5" r="1.5"/>
+        <circle id="hoxazv5wpn" cx="14.5" cy="9.5" r="1.5"/>
+        <circle id="lt6rnv1euo" cx="65" cy="39" r="1"/>
+        <circle id="q0j3mkgjmp" cx="33.5" cy="20.5" r="2.5"/>
+        <circle id="17mj7bdiqq" cx="2.5" cy="2.5" r="2.5"/>
+        <circle id="e3mdkjiujr" cx="55.5" cy="33.5" r="1.5"/>
+        <circle id="u0y1zsk0us" cx="14.5" cy="9.5" r="1.5"/>
+        <circle id="7ikp7l913t" cx="65" cy="39" r="1"/>
+        <circle id="5z5k97dvwu" cx="129.809" cy="46.5" r="1.5"/>
+        <circle id="9n8mfw4oqv" cx="106.309" cy="58" r="3"/>
+        <circle id="0q96tvsngE" cx="33.5" cy="20.5" r="2.5"/>
+        <circle id="gglknfotbF" cx="2.5" cy="2.5" r="2.5"/>
+        <circle id="ve063hdqyG" cx="55.5" cy="33.5" r="1.5"/>
+        <circle id="pec8jgl5mH" cx="14.5" cy="9.5" r="1.5"/>
+        <circle id="qadb3k7btI" cx="65" cy="39" r="1"/>
+        <circle id="31yxkgrjqJ" cx="33.5" cy="20.5" r="2.5"/>
+        <circle id="j9c0hviwuK" cx="2.5" cy="2.5" r="2.5"/>
+        <circle id="y1r5t205nL" cx="55.5" cy="33.5" r="1.5"/>
+        <circle id="w4u0wfkokM" cx="14.5" cy="9.5" r="1.5"/>
+        <circle id="6xvo3565fN" cx="65" cy="39" r="1"/>
+        <circle id="7e35x9vqhO" cx="129.809" cy="46.5" r="1.5"/>
+        <circle id="onfu4nqaxP" cx="106.309" cy="58" r="3"/>
+        <circle id="e1qv06qtnU" cx="33.5" cy="20.5" r="2.5"/>
+        <circle id="v6cn1w3ddV" cx="2.5" cy="2.5" r="2.5"/>
+        <circle id="kif2056tsW" cx="55.5" cy="33.5" r="1.5"/>
+        <circle id="v6gqni69zX" cx="14.5" cy="9.5" r="1.5"/>
+        <circle id="c4h8fmcxlY" cx="65" cy="39" r="1"/>
+        <circle id="8zk0owwu3Z" cx="33.5" cy="20.5" r="2.5"/>
+        <circle id="itqfuj3myaa" cx="2.5" cy="2.5" r="2.5"/>
+        <circle id="gkjfjhtryab" cx="55.5" cy="33.5" r="1.5"/>
+        <circle id="tifd3o5gxac" cx="14.5" cy="9.5" r="1.5"/>
+        <circle id="gvzazk50zad" cx="65" cy="39" r="1"/>
+        <circle id="gt5e4z9bxae" cx="129.809" cy="46.5" r="1.5"/>
+        <circle id="8l8r9osckaf" cx="106.309" cy="58" r="3"/>
+        <circle id="yo3nvlkuhak" cx="33.5" cy="20.5" r="2.5"/>
+        <circle id="4yziuse7dal" cx="2.5" cy="2.5" r="2.5"/>
+        <circle id="0a6tgnpl9am" cx="55.5" cy="33.5" r="1.5"/>
+        <circle id="m5xq448cjan" cx="14.5" cy="9.5" r="1.5"/>
+        <circle id="zr3kgrfteao" cx="65" cy="39" r="1"/>
+        <circle id="f8pbgtvjrap" cx="33.5" cy="20.5" r="2.5"/>
+        <circle id="thobc129xaq" cx="2.5" cy="2.5" r="2.5"/>
+        <circle id="vr9s837kwar" cx="55.5" cy="33.5" r="1.5"/>
+        <circle id="lvfqr4wfsas" cx="14.5" cy="9.5" r="1.5"/>
+        <circle id="sloh1tpcdat" cx="65" cy="39" r="1"/>
+        <circle id="z7oiqldzqau" cx="129.809" cy="46.5" r="1.5"/>
+        <circle id="qa8vnxq9yav" cx="106.309" cy="58" r="3"/>
+        <filter id="if1l1dmz5b" width="141.2%" height="177.8%" x="-20.6%" y="-38.9%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dx="-4" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+        </filter>
+        <filter id="kv5910wk1d" width="153.8%" height="200%" x="-26.9%" y="-50%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dx="-4" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+        </filter>
+        <filter id="qlt1uk8u7g" width="121.2%" height="163.5%" x="-10.6%" y="-33.8%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="5"/>
+        </filter>
+        <filter id="ccxbwqnnrh" width="104.1%" height="109%" x="-2.1%" y="-6.6%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1"/>
+        </filter>
+        <filter id="4mblqdqgpx" width="141.2%" height="177.8%" x="-20.6%" y="-38.9%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dx="-4" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+        </filter>
+        <filter id="v1eokjgnaz" width="153.8%" height="200%" x="-26.9%" y="-50%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dx="-4" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+        </filter>
+        <filter id="4dl37p4zyC" width="121.2%" height="163.5%" x="-10.6%" y="-33.8%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="5"/>
+        </filter>
+        <filter id="cgkhpjf85D" width="104.1%" height="109%" x="-2.1%" y="-6.6%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1"/>
+        </filter>
+        <filter id="2227ary6rS" width="121.7%" height="163.6%" x="-10.8%" y="-33.8%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="5"/>
+        </filter>
+        <filter id="ue9t2ebaxT" width="104.2%" height="109.1%" x="-2.1%" y="-6.6%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1"/>
+        </filter>
+        <filter id="goo82zn3xai" width="121.7%" height="163.6%" x="-10.8%" y="-33.8%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="5"/>
+        </filter>
+        <filter id="yj89hbtnmaj" width="104.2%" height="109.1%" x="-2.1%" y="-6.6%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1"/>
+        </filter>
+        <ellipse id="65pu0k6j7a" cx="10.5" cy="9.5" rx="8.5" ry="4.5"/>
+        <ellipse id="dhdr37zxvc" cx="9.926" cy="10.319" rx="6.5" ry="3.5"/>
+        <ellipse id="gotwgxa9cw" cx="10.5" cy="9.5" rx="8.5" ry="4.5"/>
+        <ellipse id="vskjlbq0zy" cx="9.926" cy="10.319" rx="6.5" ry="3.5"/>
+        <path id="2ajhmhvsze" d="M0 23.3V8.302L14.5 0 168.02 15.856l16.734 1.578c1.66-.225 3.268.095 4.825.961 1.558.866 2.526 1.979 2.905 3.338l5.648 11.446-3.996 17.254-89.382 44.783L0 23.3z"/>
+        <path id="2hf8ckcs2A" d="M0 23.3V8.302L14.5 0 168.02 15.856l16.734 1.578c1.66-.225 3.268.095 4.825.961 1.558.866 2.526 1.979 2.905 3.338l5.648 11.446-3.996 17.254-89.382 44.783L0 23.3z"/>
+        <path id="d7asbamylQ" d="M21.374 82.986L21.374 74.684 11.906 69.163 0 61.184 97.479 0 177.979 45.184 154.369 61.184 154.369 82.986 33 93.08z"/>
+        <path id="o7v1ltkb0ag" d="M21.374 82.986L21.374 74.684 11.906 69.163 0 61.184 97.479 0 177.979 45.184 154.369 61.184 154.369 82.986 33 93.08z"/>
+        <radialGradient id="ja53vryivk" cx="34.92%" cy="37.519%" r="69.616%" fx="34.92%" fy="37.519%">
+            <stop offset="0%" stop-color="#FFF" stop-opacity=".5"/>
+            <stop offset="100%" stop-opacity=".5"/>
+        </radialGradient>
+        <linearGradient id="3uvksf8rai" x1="28.8%" x2="85.304%" y1="16.037%" y2="82.862%">
+            <stop offset="0%" stop-color="#8391C5"/>
+            <stop offset="100%" stop-color="#B3A8E8"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <g>
+                        <g>
+                            <g>
+                                <g transform="translate(-1261 -570) translate(365 182) translate(788.292 114.455) translate(107.953 274.361) translate(0 101.881) translate(179.755 9.303) rotate(35 10.5 9.5)">
+                                    <use fill="#989DCC" xlink:href="#65pu0k6j7a"/>
+                                    <use fill="#000" filter="url(#if1l1dmz5b)" xlink:href="#65pu0k6j7a"/>
+                                </g>
+                                <g transform="translate(-1261 -570) translate(365 182) translate(788.292 114.455) translate(107.953 274.361) translate(0 101.881) translate(179.755 9.303) rotate(35 9.926 10.32)">
+                                    <use fill="#989DCC" xlink:href="#dhdr37zxvc"/>
+                                    <use fill="#000" filter="url(#kv5910wk1d)" xlink:href="#dhdr37zxvc"/>
+                                </g>
+                            </g>
+                            <g transform="translate(-1261 -570) translate(365 182) translate(788.292 114.455) translate(107.953 274.361) translate(0 101.881)">
+                                <mask id="bvx0glzunf" fill="#fff">
+                                    <use xlink:href="#2ajhmhvsze"/>
+                                </mask>
+                                <g mask="url(#bvx0glzunf)">
+                                    <g>
+                                        <g stroke-linecap="round">
+                                            <path stroke="#57FF5B" stroke-width="11" d="M0 0l97.748 55.954c4.997 2.86 11.145 2.815 16.1-.118l79.414-47.017h0" filter="url(#qlt1uk8u7g)" transform="translate(1.446 7.303)"/>
+                                            <path stroke="#57FF5B" stroke-width="8" d="M0 0l97.748 55.954c4.997 2.86 11.145 2.815 16.1-.118l79.414-47.017h0" transform="translate(1.446 7.303)"/>
+                                            <path stroke="#0D1731" stroke-width="6" d="M0 0l97.748 55.954c4.997 2.86 11.145 2.815 16.1-.118l79.414-47.017h0" transform="translate(1.446 7.303)"/>
+                                            <path stroke="#FFF" stroke-width="2" d="M0 0l97.716 55.936c5.014 2.87 11.186 2.814 16.147-.146l80.4-47.971h0" filter="url(#ccxbwqnnrh)" opacity=".2" transform="translate(1.446 7.303)"/>
+                                        </g>
+                                        <g>
+                                            <g transform="translate(1.446 7.303) translate(4.309 1)">
+                                                <use fill="url(#3uvksf8rai)" xlink:href="#qyq14g24vj"/>
+                                                <use fill="url(#ja53vryivk)" xlink:href="#qyq14g24vj"/>
+                                            </g>
+                                            <g transform="translate(1.446 7.303) translate(4.309 1)">
+                                                <use fill="url(#3uvksf8rai)" xlink:href="#tbof3etjal"/>
+                                                <use fill="url(#ja53vryivk)" xlink:href="#tbof3etjal"/>
+                                            </g>
+                                            <g transform="translate(1.446 7.303) translate(4.309 1)">
+                                                <use fill="url(#3uvksf8rai)" xlink:href="#95z3r49yim"/>
+                                                <use fill="url(#ja53vryivk)" xlink:href="#95z3r49yim"/>
+                                            </g>
+                                            <g transform="translate(1.446 7.303) translate(4.309 1)">
+                                                <use fill="url(#3uvksf8rai)" xlink:href="#hoxazv5wpn"/>
+                                                <use fill="url(#ja53vryivk)" xlink:href="#hoxazv5wpn"/>
+                                            </g>
+                                            <g transform="translate(1.446 7.303) translate(4.309 1)">
+                                                <use fill="url(#3uvksf8rai)" xlink:href="#lt6rnv1euo"/>
+                                                <use fill="url(#ja53vryivk)" xlink:href="#lt6rnv1euo"/>
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g transform="translate(1.446 7.303) matrix(1 0 0 -1 121.309 52)">
+                                                <use fill="url(#3uvksf8rai)" xlink:href="#q0j3mkgjmp"/>
+                                                <use fill="url(#ja53vryivk)" xlink:href="#q0j3mkgjmp"/>
+                                            </g>
+                                            <g transform="translate(1.446 7.303) matrix(1 0 0 -1 121.309 52)">
+                                                <use fill="url(#3uvksf8rai)" xlink:href="#17mj7bdiqq"/>
+                                                <use fill="url(#ja53vryivk)" xlink:href="#17mj7bdiqq"/>
+                                            </g>
+                                            <g transform="translate(1.446 7.303) matrix(1 0 0 -1 121.309 52)">
+                                                <use fill="url(#3uvksf8rai)" xlink:href="#e3mdkjiujr"/>
+                                                <use fill="url(#ja53vryivk)" xlink:href="#e3mdkjiujr"/>
+                                            </g>
+                                            <g transform="translate(1.446 7.303) matrix(1 0 0 -1 121.309 52)">
+                                                <use fill="url(#3uvksf8rai)" xlink:href="#u0y1zsk0us"/>
+                                                <use fill="url(#ja53vryivk)" xlink:href="#u0y1zsk0us"/>
+                                            </g>
+                                            <g transform="translate(1.446 7.303) matrix(1 0 0 -1 121.309 52)">
+                                                <use fill="url(#3uvksf8rai)" xlink:href="#7ikp7l913t"/>
+                                                <use fill="url(#ja53vryivk)" xlink:href="#7ikp7l913t"/>
+                                            </g>
+                                        </g>
+                                        <g transform="translate(1.446 7.303)">
+                                            <use fill="url(#3uvksf8rai)" xlink:href="#5z5k97dvwu"/>
+                                            <use fill="url(#ja53vryivk)" xlink:href="#5z5k97dvwu"/>
+                                        </g>
+                                        <g transform="translate(1.446 7.303)">
+                                            <use fill="url(#3uvksf8rai)" xlink:href="#9n8mfw4oqv"/>
+                                            <use fill="url(#ja53vryivk)" xlink:href="#9n8mfw4oqv"/>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g transform="translate(-1261 -570) translate(365 182) translate(788.292 114.455) translate(107.953 274.361) matrix(-1 0 0 1 442 100.881) translate(179.755 9.303) rotate(35 10.5 9.5)">
+                                    <use fill="#989DCC" xlink:href="#gotwgxa9cw"/>
+                                    <use fill="#000" filter="url(#4mblqdqgpx)" xlink:href="#gotwgxa9cw"/>
+                                </g>
+                                <g transform="translate(-1261 -570) translate(365 182) translate(788.292 114.455) translate(107.953 274.361) matrix(-1 0 0 1 442 100.881) translate(179.755 9.303) rotate(35 9.926 10.32)">
+                                    <use fill="#989DCC" xlink:href="#vskjlbq0zy"/>
+                                    <use fill="#000" filter="url(#v1eokjgnaz)" xlink:href="#vskjlbq0zy"/>
+                                </g>
+                            </g>
+                            <g transform="translate(-1261 -570) translate(365 182) translate(788.292 114.455) translate(107.953 274.361) matrix(-1 0 0 1 442 100.881)">
+                                <mask id="cousilfamB" fill="#fff">
+                                    <use xlink:href="#2hf8ckcs2A"/>
+                                </mask>
+                                <g mask="url(#cousilfamB)">
+                                    <g>
+                                        <g stroke-linecap="round">
+                                            <path stroke="#57FF5B" stroke-width="11" d="M0 0l97.748 55.954c4.997 2.86 11.145 2.815 16.1-.118l79.414-47.017h0" filter="url(#4dl37p4zyC)" transform="translate(1.446 7.303)"/>
+                                            <path stroke="#57FF5B" stroke-width="8" d="M0 0l97.748 55.954c4.997 2.86 11.145 2.815 16.1-.118l79.414-47.017h0" transform="translate(1.446 7.303)"/>
+                                            <path stroke="#0D1731" stroke-width="6" d="M0 0l97.748 55.954c4.997 2.86 11.145 2.815 16.1-.118l79.414-47.017h0" transform="translate(1.446 7.303)"/>
+                                            <path stroke="#FFF" stroke-width="2" d="M0 0l97.716 55.936c5.014 2.87 11.186 2.814 16.147-.146l80.4-47.971h0" filter="url(#cgkhpjf85D)" opacity=".2" transform="translate(1.446 7.303)"/>
+                                        </g>
+                                        <g>
+                                            <g transform="translate(1.446 7.303) translate(4.309 1)">
+                                                <use fill="url(#3uvksf8rai)" xlink:href="#0q96tvsngE"/>
+                                                <use fill="url(#ja53vryivk)" xlink:href="#0q96tvsngE"/>
+                                            </g>
+                                            <g transform="translate(1.446 7.303) translate(4.309 1)">
+                                                <use fill="url(#3uvksf8rai)" xlink:href="#gglknfotbF"/>
+                                                <use fill="url(#ja53vryivk)" xlink:href="#gglknfotbF"/>
+                                            </g>
+                                            <g transform="translate(1.446 7.303) translate(4.309 1)">
+                                                <use fill="url(#3uvksf8rai)" xlink:href="#ve063hdqyG"/>
+                                                <use fill="url(#ja53vryivk)" xlink:href="#ve063hdqyG"/>
+                                            </g>
+                                            <g transform="translate(1.446 7.303) translate(4.309 1)">
+                                                <use fill="url(#3uvksf8rai)" xlink:href="#pec8jgl5mH"/>
+                                                <use fill="url(#ja53vryivk)" xlink:href="#pec8jgl5mH"/>
+                                            </g>
+                                            <g transform="translate(1.446 7.303) translate(4.309 1)">
+                                                <use fill="url(#3uvksf8rai)" xlink:href="#qadb3k7btI"/>
+                                                <use fill="url(#ja53vryivk)" xlink:href="#qadb3k7btI"/>
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g transform="translate(1.446 7.303) matrix(1 0 0 -1 121.309 52)">
+                                                <use fill="url(#3uvksf8rai)" xlink:href="#31yxkgrjqJ"/>
+                                                <use fill="url(#ja53vryivk)" xlink:href="#31yxkgrjqJ"/>
+                                            </g>
+                                            <g transform="translate(1.446 7.303) matrix(1 0 0 -1 121.309 52)">
+                                                <use fill="url(#3uvksf8rai)" xlink:href="#j9c0hviwuK"/>
+                                                <use fill="url(#ja53vryivk)" xlink:href="#j9c0hviwuK"/>
+                                            </g>
+                                            <g transform="translate(1.446 7.303) matrix(1 0 0 -1 121.309 52)">
+                                                <use fill="url(#3uvksf8rai)" xlink:href="#y1r5t205nL"/>
+                                                <use fill="url(#ja53vryivk)" xlink:href="#y1r5t205nL"/>
+                                            </g>
+                                            <g transform="translate(1.446 7.303) matrix(1 0 0 -1 121.309 52)">
+                                                <use fill="url(#3uvksf8rai)" xlink:href="#w4u0wfkokM"/>
+                                                <use fill="url(#ja53vryivk)" xlink:href="#w4u0wfkokM"/>
+                                            </g>
+                                            <g transform="translate(1.446 7.303) matrix(1 0 0 -1 121.309 52)">
+                                                <use fill="url(#3uvksf8rai)" xlink:href="#6xvo3565fN"/>
+                                                <use fill="url(#ja53vryivk)" xlink:href="#6xvo3565fN"/>
+                                            </g>
+                                        </g>
+                                        <g transform="translate(1.446 7.303)">
+                                            <use fill="url(#3uvksf8rai)" xlink:href="#7e35x9vqhO"/>
+                                            <use fill="url(#ja53vryivk)" xlink:href="#7e35x9vqhO"/>
+                                        </g>
+                                        <g transform="translate(1.446 7.303)">
+                                            <use fill="url(#3uvksf8rai)" xlink:href="#onfu4nqaxP"/>
+                                            <use fill="url(#ja53vryivk)" xlink:href="#onfu4nqaxP"/>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                        <g transform="translate(-1261 -570) translate(365 182) translate(788.292 114.455) translate(107.953 274.361) translate(5.755 3)">
+                            <mask id="eex115nosR" fill="#fff">
+                                <use xlink:href="#d7asbamylQ"/>
+                            </mask>
+                            <g mask="url(#eex115nosR)">
+                                <g>
+                                    <path stroke="#57FF5B" stroke-linecap="round" stroke-width="11" d="M0 0l97.8 55.984c4.969 2.844 11.08 2.817 16.022-.073l75.44-44.092h0" filter="url(#2227ary6rS)" transform="rotate(180 102.846 42.592)"/>
+                                    <path stroke="#57FF5B" stroke-linecap="round" stroke-width="8" d="M0 0l97.8 55.984c4.969 2.844 11.08 2.817 16.022-.073l75.44-44.092h0" transform="rotate(180 102.846 42.592)"/>
+                                    <path stroke="#0D1731" stroke-linecap="round" stroke-width="6" d="M0 0l97.8 55.984c4.969 2.844 11.08 2.817 16.022-.073l75.44-44.092h0" transform="rotate(180 102.846 42.592)"/>
+                                    <path stroke="#FFF" stroke-linecap="round" stroke-width="2" d="M0 0l97.8 55.984c4.969 2.844 11.08 2.817 16.022-.073l75.44-44.092h0" filter="url(#ue9t2ebaxT)" opacity=".2" transform="rotate(180 102.846 42.592)"/>
+                                    <g>
+                                        <g transform="rotate(180 102.846 42.592) translate(4.309 1)">
+                                            <use fill="url(#3uvksf8rai)" xlink:href="#e1qv06qtnU"/>
+                                            <use fill="url(#ja53vryivk)" xlink:href="#e1qv06qtnU"/>
+                                        </g>
+                                        <g transform="rotate(180 102.846 42.592) translate(4.309 1)">
+                                            <use fill="url(#3uvksf8rai)" xlink:href="#v6cn1w3ddV"/>
+                                            <use fill="url(#ja53vryivk)" xlink:href="#v6cn1w3ddV"/>
+                                        </g>
+                                        <g transform="rotate(180 102.846 42.592) translate(4.309 1)">
+                                            <use fill="url(#3uvksf8rai)" xlink:href="#kif2056tsW"/>
+                                            <use fill="url(#ja53vryivk)" xlink:href="#kif2056tsW"/>
+                                        </g>
+                                        <g transform="rotate(180 102.846 42.592) translate(4.309 1)">
+                                            <use fill="url(#3uvksf8rai)" xlink:href="#v6gqni69zX"/>
+                                            <use fill="url(#ja53vryivk)" xlink:href="#v6gqni69zX"/>
+                                        </g>
+                                        <g transform="rotate(180 102.846 42.592) translate(4.309 1)">
+                                            <use fill="url(#3uvksf8rai)" xlink:href="#c4h8fmcxlY"/>
+                                            <use fill="url(#ja53vryivk)" xlink:href="#c4h8fmcxlY"/>
+                                        </g>
+                                    </g>
+                                    <g>
+                                        <g transform="rotate(180 102.846 42.592) matrix(1 0 0 -1 121.309 52)">
+                                            <use fill="url(#3uvksf8rai)" xlink:href="#8zk0owwu3Z"/>
+                                            <use fill="url(#ja53vryivk)" xlink:href="#8zk0owwu3Z"/>
+                                        </g>
+                                        <g transform="rotate(180 102.846 42.592) matrix(1 0 0 -1 121.309 52)">
+                                            <use fill="url(#3uvksf8rai)" xlink:href="#itqfuj3myaa"/>
+                                            <use fill="url(#ja53vryivk)" xlink:href="#itqfuj3myaa"/>
+                                        </g>
+                                        <g transform="rotate(180 102.846 42.592) matrix(1 0 0 -1 121.309 52)">
+                                            <use fill="url(#3uvksf8rai)" xlink:href="#gkjfjhtryab"/>
+                                            <use fill="url(#ja53vryivk)" xlink:href="#gkjfjhtryab"/>
+                                        </g>
+                                        <g transform="rotate(180 102.846 42.592) matrix(1 0 0 -1 121.309 52)">
+                                            <use fill="url(#3uvksf8rai)" xlink:href="#tifd3o5gxac"/>
+                                            <use fill="url(#ja53vryivk)" xlink:href="#tifd3o5gxac"/>
+                                        </g>
+                                        <g transform="rotate(180 102.846 42.592) matrix(1 0 0 -1 121.309 52)">
+                                            <use fill="url(#3uvksf8rai)" xlink:href="#gvzazk50zad"/>
+                                            <use fill="url(#ja53vryivk)" xlink:href="#gvzazk50zad"/>
+                                        </g>
+                                    </g>
+                                    <g transform="rotate(180 102.846 42.592)">
+                                        <use fill="url(#3uvksf8rai)" xlink:href="#gt5e4z9bxae"/>
+                                        <use fill="url(#ja53vryivk)" xlink:href="#gt5e4z9bxae"/>
+                                    </g>
+                                    <g transform="rotate(180 102.846 42.592)">
+                                        <use fill="url(#3uvksf8rai)" xlink:href="#8l8r9osckaf"/>
+                                        <use fill="url(#ja53vryivk)" xlink:href="#8l8r9osckaf"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                        <g transform="translate(-1261 -570) translate(365 182) translate(788.292 114.455) translate(107.953 274.361) matrix(-1 0 0 1 438.755 0)">
+                            <mask id="l0rh6opn3ah" fill="#fff">
+                                <use xlink:href="#o7v1ltkb0ag"/>
+                            </mask>
+                            <g mask="url(#l0rh6opn3ah)">
+                                <g>
+                                    <path stroke="#57FF5B" stroke-linecap="round" stroke-width="11" d="M0 0l97.8 55.984c4.969 2.844 11.08 2.817 16.022-.073l75.44-44.092h0" filter="url(#goo82zn3xai)" transform="rotate(180 102.846 42.592)"/>
+                                    <path stroke="#57FF5B" stroke-linecap="round" stroke-width="8" d="M0 0l97.8 55.984c4.969 2.844 11.08 2.817 16.022-.073l75.44-44.092h0" transform="rotate(180 102.846 42.592)"/>
+                                    <path stroke="#0D1731" stroke-linecap="round" stroke-width="6" d="M0 0l97.8 55.984c4.969 2.844 11.08 2.817 16.022-.073l75.44-44.092h0" transform="rotate(180 102.846 42.592)"/>
+                                    <path stroke="#FFF" stroke-linecap="round" stroke-width="2" d="M0 0l97.8 55.984c4.969 2.844 11.08 2.817 16.022-.073l75.44-44.092h0" filter="url(#yj89hbtnmaj)" opacity=".2" transform="rotate(180 102.846 42.592)"/>
+                                    <g>
+                                        <g transform="rotate(180 102.846 42.592) translate(4.309 1)">
+                                            <use fill="url(#3uvksf8rai)" xlink:href="#yo3nvlkuhak"/>
+                                            <use fill="url(#ja53vryivk)" xlink:href="#yo3nvlkuhak"/>
+                                        </g>
+                                        <g transform="rotate(180 102.846 42.592) translate(4.309 1)">
+                                            <use fill="url(#3uvksf8rai)" xlink:href="#4yziuse7dal"/>
+                                            <use fill="url(#ja53vryivk)" xlink:href="#4yziuse7dal"/>
+                                        </g>
+                                        <g transform="rotate(180 102.846 42.592) translate(4.309 1)">
+                                            <use fill="url(#3uvksf8rai)" xlink:href="#0a6tgnpl9am"/>
+                                            <use fill="url(#ja53vryivk)" xlink:href="#0a6tgnpl9am"/>
+                                        </g>
+                                        <g transform="rotate(180 102.846 42.592) translate(4.309 1)">
+                                            <use fill="url(#3uvksf8rai)" xlink:href="#m5xq448cjan"/>
+                                            <use fill="url(#ja53vryivk)" xlink:href="#m5xq448cjan"/>
+                                        </g>
+                                        <g transform="rotate(180 102.846 42.592) translate(4.309 1)">
+                                            <use fill="url(#3uvksf8rai)" xlink:href="#zr3kgrfteao"/>
+                                            <use fill="url(#ja53vryivk)" xlink:href="#zr3kgrfteao"/>
+                                        </g>
+                                    </g>
+                                    <g>
+                                        <g transform="rotate(180 102.846 42.592) matrix(1 0 0 -1 121.309 52)">
+                                            <use fill="url(#3uvksf8rai)" xlink:href="#f8pbgtvjrap"/>
+                                            <use fill="url(#ja53vryivk)" xlink:href="#f8pbgtvjrap"/>
+                                        </g>
+                                        <g transform="rotate(180 102.846 42.592) matrix(1 0 0 -1 121.309 52)">
+                                            <use fill="url(#3uvksf8rai)" xlink:href="#thobc129xaq"/>
+                                            <use fill="url(#ja53vryivk)" xlink:href="#thobc129xaq"/>
+                                        </g>
+                                        <g transform="rotate(180 102.846 42.592) matrix(1 0 0 -1 121.309 52)">
+                                            <use fill="url(#3uvksf8rai)" xlink:href="#vr9s837kwar"/>
+                                            <use fill="url(#ja53vryivk)" xlink:href="#vr9s837kwar"/>
+                                        </g>
+                                        <g transform="rotate(180 102.846 42.592) matrix(1 0 0 -1 121.309 52)">
+                                            <use fill="url(#3uvksf8rai)" xlink:href="#lvfqr4wfsas"/>
+                                            <use fill="url(#ja53vryivk)" xlink:href="#lvfqr4wfsas"/>
+                                        </g>
+                                        <g transform="rotate(180 102.846 42.592) matrix(1 0 0 -1 121.309 52)">
+                                            <use fill="url(#3uvksf8rai)" xlink:href="#sloh1tpcdat"/>
+                                            <use fill="url(#ja53vryivk)" xlink:href="#sloh1tpcdat"/>
+                                        </g>
+                                    </g>
+                                    <g transform="rotate(180 102.846 42.592)">
+                                        <use fill="url(#3uvksf8rai)" xlink:href="#z7oiqldzqau"/>
+                                        <use fill="url(#ja53vryivk)" xlink:href="#z7oiqldzqau"/>
+                                    </g>
+                                    <g transform="rotate(180 102.846 42.592)">
+                                        <use fill="url(#3uvksf8rai)" xlink:href="#qa8vnxq9yav"/>
+                                        <use fill="url(#ja53vryivk)" xlink:href="#qa8vnxq9yav"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

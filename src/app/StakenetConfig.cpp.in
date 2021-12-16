@@ -1,0 +1,41 @@
+#include <StakenetConfig.hpp>
+#include <Utils/Utils.hpp>
+
+#cmakedefine DEFAULT_USE_STAGING
+
+//==============================================================================
+
+extern const char STAKENET_GIT_SHA1_BUILD[] = "@GIT_SHA1@";
+
+const unsigned int STAKENET_MAJOR_VERSION = @Stakenet_VERSION_MAJOR@;
+const unsigned int STAKENET_MINOR_VERSION = @Stakenet_VERSION_MINOR@;
+const unsigned int STAKENET_PATCH_VERSION = @Stakenet_VERSION_PATCH@;
+const unsigned int STAKENET_TWEAK_VERSION = @Stakenet_VERSION_TWEAK@;
+
+#if defined(DEFAULT_USE_STAGING)
+const bool STAKENET_DEFAULT_STAGING = true;
+#else
+const bool STAKENET_DEFAULT_STAGING = false;
+#endif
+
+//==============================================================================
+
+QString StakenetVersion()
+{
+    return VersionUtils::FormatAsString(STAKENET_MAJOR_VERSION,
+                                        STAKENET_MINOR_VERSION,
+                                        STAKENET_PATCH_VERSION,
+                                        STAKENET_TWEAK_VERSION);
+}
+
+//==============================================================================
+
+unsigned int StakenetNumericVersion()
+{
+    return VersionUtils::FormatAsNumber(STAKENET_MAJOR_VERSION,
+                                        STAKENET_MINOR_VERSION,
+                                        STAKENET_PATCH_VERSION,
+                                        STAKENET_TWEAK_VERSION);
+}
+
+//==============================================================================

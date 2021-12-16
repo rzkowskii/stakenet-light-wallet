@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+import "Common.proto";
+
+package lightwalletrpc;
+
+message KeyLocator {
+    /// The family of key being identified.
+    uint32 keyFamily = 1;
+
+    /// The precise index of the key being identified.
+    uint32 keyIndex = 2;
+}
+
+message KeyDescriptor {
+     /**
+     The raw bytes of the key being identified. Encoded as Hex. Either this or the KeyLocator
+     must be specified.
+     */
+     string pubKey = 1;
+
+     /**
+     The key locator that identifies which key to use for signing. Either this
+     or the raw bytes of the target key must be specified.
+     */
+     KeyLocator locator = 2;
+}
+
+message DeriveNextKeyReq {
+    uint32 keyFamily = 1;
+}
+
+message IsOurAddressResponse {
+    bool isOur = 1;
+}
+
+service KeychainService {
+    rpc DeriveNextKey(DeriveNextKeyReq) returns (KeyDescriptor);
+    rpc DeriveKey(KeyLocator) returns (KeyDescriptor);
+    rpc DerivePrivKey(KeyDescriptor) returns (HexEncoded);
+    rpc IsOurAddress(HexEncoded) returns (IsOurAddressResponse);
+}

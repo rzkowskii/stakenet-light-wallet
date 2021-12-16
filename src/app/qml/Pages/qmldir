@@ -1,0 +1,20 @@
+module Pages
+ComingSoonPage 1.0 ComingSoonPage.qml
+DexPage 1.0 DexPage.qml
+EmulatorPage 1.0 EmulatorPage.qml
+LightningManagerPage 1.0 LightningManagerPage.qml
+LoadingPage 1.0 LoadingPage.qml
+MainPage 1.0 MainPage.qml
+MnemonicMobilePage 1.0 MnemonicMobilePage.qml
+MobileHelpPage 1.0 MobileHelpPage.qml
+MobilePersonalizePage 1.0 MobilePersonalizePage.qml
+MobileReceivePage 1.0 MobileReceivePage.qml
+MobileSendPage 1.0 MobileSendPage.qml
+MobileSettingsAssetsPage 1.0 MobileSettingsAssetsPage.qml
+MobileSkinsPage 1.0 MobileSkinsPage.qml
+PortfolioPage 1.0 PortfolioPage.qml
+SettingsPage 1.0 SettingsPage.qml
+SwapPage 1.0 SwapPage.qml
+TransactionPage 1.0 TransactionPage.qml
+UnlockWalletPage 1.0 UnlockWalletPage.qml
+WalletPage 1.0 WalletPage.qml
