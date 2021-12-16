@@ -65,8 +65,8 @@ jobs:
 
       - name: Deploy to staging
         env:
-          AWS_ACCESS_KEY_ID: secrets.AWS_ACCESS_KEY_ID
-          AWS_SECRET_ACCESS_KEY: secrets.AWS_SECRET_ACCESS_KEY
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: AWS_EC2_METADATA_DISABLED=true cmake -DDEPLOY_ENV="production" -DPLATFORM="linux" -DINSTALLER=$PWD/package/Stakenet.zip -DUPDATE_DIR=$PWD/package/update/$GITHUB_SHA -P $PWD/../cmake/s3-deploy-update.cmake
         working-directory: ${{env.working-directory}}/build
 

@@ -48,8 +48,8 @@ jobs:
       - uses: chrislennon/action-aws-cli@v1.1
       - name: Deploy to staging
         env:
-          AWS_ACCESS_KEY_ID: secrets.AWS_ACCESS_KEY_ID
-          AWS_SECRET_ACCESS_KEY: secrets.AWS_SECRET_ACCESS_KEY
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: cmake -DDEPLOY_ENV="production" -DPLATFORM="osx" -DUPDATE_DIR=package/update/$GITHUB_SHA -DINSTALLER=Stakenet.dmg -P $PWD/../cmake/s3-deploy-update.cmake
         working-directory: ${{env.working-directory}}/build
 
