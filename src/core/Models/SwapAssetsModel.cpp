@@ -245,6 +245,7 @@ void SwapAssetsModel::onTradingPairsChanged()
     }
 
     for (auto&& t : temp) {
+        LogCDebug(General) << "pairIdd " << t;
         if (whitelist.count(t)) {
             _impl.push_back(t);
         }

@@ -109,7 +109,7 @@ void OpenChannelViewModel::initOpenChannelModel()
         return _applicationViewModel->transactionsCache()->cacheById(assetID).then(
             [assetID, asset, assetsModel, assetsBalance, this](AbstractTransactionsCache* cache) {
                 // create send tx model
-                auto chainId = asset.params().chainId.value();
+                auto chainId = *asset.params().chainId;
                 auto factory = _applicationViewModel->apiClientsFactory();
                 auto web3 = factory->createWeb3Client(chainId);
                 auto sendTransactionModel = new SendAccountTransactionModel{ assetID, assetsModel,

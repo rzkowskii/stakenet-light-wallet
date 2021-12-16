@@ -113,7 +113,7 @@ Promise<QString> ConnextDaemonInterface::openChannel(
                                 const auto& resolve, const auto& reject) {
         QMetaObject::invokeMethod(_executionContext, [=] {
             auto asset = _assetsModel.assetById(assetID);
-            auto chainId = asset.params().chainId.value();
+            auto chainId = *asset.params().chainId;
 
             _connextClient->getChannelsList(_identifier)
                 .then([identityKey, chainId, reject](QVector<QVariantMap> channels) {
@@ -314,7 +314,7 @@ Promise<QString> ConnextDaemonInterface::restoreChannel(AssetID assetID) const
     return Promise<QString>([this, assetID](const auto& resolve, const auto& reject) {
         QMetaObject::invokeMethod(_executionContext, [=] {
             auto asset = _assetsModel.assetById(assetID);
-            auto chainId = asset.params().chainId.value();
+            auto chainId = *asset.params().chainId;
 
             QVariantMap payload;
             payload["counterpartyIdentifier"]
