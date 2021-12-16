@@ -1,0 +1,80 @@
+name: Build windows
+
+on:
+  push:
+    # Sequence of patterns matched against refs/heads
+    branches:
+      - master # Push events on master branch
+    # branches-ignore:
+    # - '**'
+
+jobs:
+  build:
+    runs-on: "windows-latest"
+    env:
+      working-directory: sources
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: ${{env.working-directory}}
+
+      - name: Prepare conan
+        run: pip install conan && conan config set general.revisions_enabled=1 && conan remote add jfrog-x9developers https://stakenetwallet.jfrog.io/artifactory/api/conan/light-wallet-conan && conan user
+        shell: bash
+
+      - name: Download packages
+        run: mkdir -p build && cd build && conan install ../src -s compiler.version=15
+        working-directory: ${{env.working-directory}}
+        shell: bash
+
+      - name: Build project
+        run: |
+          cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -G "Visual Studio 16 2019" -A "x64" -T "v141" ../src \
+          && cmake --build . --config RelWithDebInfo --target Stakenet --parallel 2
+        working-directory: ${{env.working-directory}}/build
+        shell: bash
+
+      - name: Setup Sentry CLI
+        uses: mathrix-education/setup-sentry-cli@0.1.0
+        with:
+          version: latest # optional if 'latest'
+          token: ccb1c5360696475480cc1b028f52be8d9f8da2fae5a741b28e2c867bfe6bd6e5 #${{ SECRETS.SENTRY_TOKEN }} # from GitHub secrets
+          organization: alexis-hernandez
+          project: stakenet-wallet-native-cc
+
+      - name: Upload symbols
+        run: |
+          sentry-cli upload-dif --include-sources pdb
+        working-directory: ${{env.working-directory}}/build
+        shell: bash
+
+      - name: Install project
+        run: |
+          cmake --install . --component Stakenet --config RelWithDebInfo
+        working-directory: ${{env.working-directory}}/build
+        shell: bash
+
+      - uses: chrislennon/action-aws-cli@v1.1
+
+      - name: Deploy to staging
+        env:
+          AWS_ACCESS_KEY_ID: secrets.AWS_ACCESS_KEY_ID
+          AWS_SECRET_ACCESS_KEY: secrets.AWS_SECRET_ACCESS_KEY
+        run: cmake -DDEPLOY_ENV="production" -DPLATFORM="win" -DINSTALLER=package/Stakenet.zip -DUPDATE_DIR=package/update/$GITHUB_SHA -P $PWD/../cmake/s3-deploy-update.cmake
+        working-directory: ${{env.working-directory}}/build
+        shell: bash
+
+      - name: Prepare env for lssd deployment
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+        run: |
+          export TMP_LSSD_TAG=$(grep CMAKE_PROJECT_VERSION:STATIC CMakeCache.txt | cut -d "=" -f2 | tr -d '\n')
+          echo "::set-env name=LSSD_TAG::$TMP_LSSD_TAG"
+        working-directory: ${{env.working-directory}}/build
+        shell: bash
+    # - uses: Ilshidur/action-discord@0.3.0"
+    #   env:
+    #     DISCORD_WEBHOOK: https://discord.com/api/webhooks/747792295692337223/RkigsTZtTOeqVUt2QeS2sLlxsMg6OQBm8DsDseu8AoZob7grDa3xcbF8IjW8jyEv26Q6
+    #   with:
+    #     args: "Windows version ready: ${{env.LSSD_TAG}}"

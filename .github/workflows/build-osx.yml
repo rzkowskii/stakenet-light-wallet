@@ -1,0 +1,67 @@
+name: Build osx
+
+on:
+  push:
+    # Sequence of patterns matched against refs/heads
+    branches:
+      - master # Push events on master branch
+      # - sentry-integration
+#    branches-ignore:
+#      - '**'
+
+jobs:
+  build:
+    runs-on: "macos-latest"
+    env:
+      working-directory: sources
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: ${{env.working-directory}}
+
+      - name: Select default xcode version
+        run: sudo xcode-select -s "/Applications/Xcode_11.7.app"
+
+      - name: Prepare conan
+        run: |
+          pip3 install conan \
+          && conan config set general.revisions_enabled=1 \
+          && conan remote add jfrog-x9developers https://stakenetwallet.jfrog.io/artifactory/api/conan/light-wallet-conan \
+          && conan user
+
+      - name: Download packages
+        run: mkdir -p build && cd build && conan install ../src
+        working-directory: ${{env.working-directory}}
+
+      - name: Build project
+        run: |
+          cmake -DCMAKE_OSX_DEPLOYMENT_TARGET="10.13" -DCMAKE_BUILD_TYPE=RelWithDebInfo ../src \
+            && cmake --build . --target Stakenet --parallel 2
+        working-directory: ${{env.working-directory}}/build
+
+      - name: Install project
+        run: |
+          cmake --install . --component Stakenet
+        working-directory: ${{env.working-directory}}/build
+
+      - uses: chrislennon/action-aws-cli@v1.1
+      - name: Deploy to staging
+        env:
+          AWS_ACCESS_KEY_ID: secrets.AWS_ACCESS_KEY_ID
+          AWS_SECRET_ACCESS_KEY: secrets.AWS_SECRET_ACCESS_KEY
+        run: cmake -DDEPLOY_ENV="production" -DPLATFORM="osx" -DUPDATE_DIR=package/update/$GITHUB_SHA -DINSTALLER=Stakenet.dmg -P $PWD/../cmake/s3-deploy-update.cmake
+        working-directory: ${{env.working-directory}}/build
+
+      - name: Prepare env for lssd deployment
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+        run: |
+          export TMP_LSSD_TAG=$(grep CMAKE_PROJECT_VERSION:STATIC CMakeCache.txt | cut -d "=" -f2 | tr -d '\n')
+          echo "::set-env name=LSSD_TAG::$TMP_LSSD_TAG"
+        working-directory: ${{env.working-directory}}/build
+    # - uses: "Ilshidur/action-discord@0.3.0"
+    #   env:
+    #     DISCORD_WEBHOOK: https://discord.com/api/webhooks/747792295692337223/RkigsTZtTOeqVUt2QeS2sLlxsMg6OQBm8DsDseu8AoZob7grDa3xcbF8IjW8jyEv26Q6
+    #   with:
+    #     args: "OSX version ready: ${{env.LSSD_TAG}}"

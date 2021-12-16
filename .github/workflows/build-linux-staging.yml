@@ -1,0 +1,57 @@
+name: Build linux(staging)
+
+on:
+  push:
+    # Sequence of patterns matched against refs/heads
+    branches:
+      - staging # Push events on master branch
+    # branches-ignore:
+    #  - '**'
+
+jobs:
+  build:
+    runs-on: "ubuntu-latest"
+    container: yuraolex/useful:cpp-connan-ubuntu-18
+    env:
+      working-directory: sources
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: ${{env.working-directory}}
+
+      - name: Prepare conan
+        run: conan config set general.revisions_enabled=True && conan remote add jfrog-x9developers https://stakenetwallet.jfrog.io/artifactory/api/conan/light-wallet-conan && conan user
+      - name: Download packages
+        run: mkdir -p build && cd build && conan install ../src -s compiler.libcxx=libstdc++11
+        working-directory: ${{env.working-directory}}
+      - name: Build project
+        run: |
+          cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DDEFAULT_USE_STAGING=ON ../src \
+            && cmake --build . --target Stakenet --parallel 2
+        working-directory: ${{env.working-directory}}/build
+
+      - name: Install project
+        run: LD_LIBRARY_PATH=$PWD/lib cmake --install . --component Stakenet
+        working-directory: ${{env.working-directory}}/build
+
+      - name: Deploy to staging
+        env:
+          AWS_ACCESS_KEY_ID: secrets.AWS_ACCESS_KEY_ID
+          AWS_SECRET_ACCESS_KEY: secrets.AWS_SECRET_ACCESS_KEY
+        run: AWS_EC2_METADATA_DISABLED=true cmake -DDEPLOY_ENV="staging" -DPLATFORM="linux" -DINSTALLER=$PWD/package/Stakenet.zip -DUPDATE_DIR=$PWD/package/update/$GITHUB_SHA -P $PWD/../cmake/s3-deploy-update.cmake
+        working-directory: ${{env.working-directory}}/build
+
+      - name: Prepare env for lssd deployment
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+        run: |
+          export TMP_LSSD_TAG=$(grep CMAKE_PROJECT_VERSION:STATIC CMakeCache.txt | cut -d "=" -f2 | tr -d '\n')
+          echo "::set-env name=LSSD_TAG::$TMP_LSSD_TAG"
+        working-directory: ${{env.working-directory}}/build
+
+      - uses: "Ilshidur/action-discord@0.3.0"
+        env:
+          DISCORD_WEBHOOK: https://discord.com/api/webhooks/747792185776275457/8HyQEMTad6eBnsKbRD20jj4essZHKa22upJ1UkZBQj3c3ZM9vijYIgYhHRaXJrrrKCgF
+        with:
+          args: "Linux version ready: ${{env.LSSD_TAG}}"
