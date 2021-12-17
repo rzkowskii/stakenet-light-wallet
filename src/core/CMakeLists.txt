@@ -10,7 +10,7 @@ target_link_libraries(core
     lightningswaps
     networking
     tradingbot
-    CONAN_PKG::zeromq)
+    ZERO_MQ_TARGET)
 
 target_compile_options(core PRIVATE
      $<$<OR:$<CXX_COMPILER_ID:Clang>,$<CXX_COMPILER_ID:AppleClang>,$<CXX_COMPILER_ID:GNU>>:-Wall>

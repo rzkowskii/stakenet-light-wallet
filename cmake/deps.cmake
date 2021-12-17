@@ -14,6 +14,11 @@ message(STATUS "Modules install dir: ${MODULES_INSTALL_DIR}")
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup(TARGETS NO_OUTPUT_DIRS KEEP_RPATHS)
 
+set(ZERO_MQ_TARGET CONAN_PKG::ZeroMQ)
+if (CONAN_PKG::zeromq)
+    set (ZERO_MQ_TARGET CONAN_PKG::zeromq)
+endif()
+
 find_program(BREAKPAD_DUMP_SYMS_EXE NAMES dump_syms PATHS "${CMAKE_BINARY_DIR}/bin" NO_DEFAULT_PATH)
 find_package(OpenSSL REQUIRED)
 
@@ -26,3 +31,4 @@ include(leveldb)
 #include(breakpad)
 #include(secp256k1)
 include(boost)
+
