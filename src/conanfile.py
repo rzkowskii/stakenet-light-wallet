@@ -5,7 +5,7 @@ from conans.errors import ConanInvalidConfiguration
 class StakenetConan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
     requires = [("boost/1.72.0"),
-                ("zeromq/4.3.2"),
+                ("zeromq/4.3.4"),
                 ("openssl/1.1.1f"),
                 ("zlib/1.2.11"),
                 ("abseil/20200225.1@x9developers/stable"),
