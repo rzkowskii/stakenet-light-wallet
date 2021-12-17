@@ -36,7 +36,7 @@ jobs:
 
       - name: Build project
         run: |
-          cmake -DCMAKE_OSX_DEPLOYMENT_TARGET="10.13" -DCMAKE_BUILD_TYPE=RelWithDebInfo ../src \
+          cmake -DCMAKE_OSX_DEPLOYMENT_TARGET="10.14" -DCMAKE_BUILD_TYPE=RelWithDebInfo ../src \
             && cmake --build . --target Stakenet --parallel 2
         working-directory: ${{env.working-directory}}/build
 
@@ -46,6 +46,9 @@ jobs:
         working-directory: ${{env.working-directory}}/build
 
       - uses: chrislennon/action-aws-cli@v1.1
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+
       - name: Deploy to staging
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
