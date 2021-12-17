@@ -36,10 +36,12 @@ jobs:
         shell: bash
 
       - name: Setup Sentry CLI
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
         uses: mathrix-education/setup-sentry-cli@0.1.0
         with:
           version: latest # optional if 'latest'
-          token: ccb1c5360696475480cc1b028f52be8d9f8da2fae5a741b28e2c867bfe6bd6e5 #${{ SECRETS.SENTRY_TOKEN }} # from GitHub secrets
+          token: ${{ secrets.SENTRY_TOKEN }} # from GitHub secrets
           organization: alexis-hernandez
           project: stakenet-wallet-native-cc
 

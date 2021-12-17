@@ -52,6 +52,7 @@ jobs:
       - name: Publish lssd
         uses: tix-factory/release-manager@v1
         with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           mode: uploadReleaseAsset
           filePath: ${{env.working-directory}}/build/package/lssd.zip
           assetName: lssd.zip
@@ -73,6 +74,7 @@ jobs:
       - name: Publish lnd tar
         uses: tix-factory/release-manager@v1
         with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           mode: uploadReleaseAsset
           filePath: ${{env.working-directory}}/build/bin/lnd.tar.gz
           assetName: lnd.tar.gz

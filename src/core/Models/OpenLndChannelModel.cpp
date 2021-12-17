@@ -24,7 +24,7 @@ void OpenLndChannelModel::createOpenChannelRequest(
 void OpenLndChannelModel::confirmRequest()
 {
     if (_currentRequest.has_value()) {
-        const auto& req = _currentRequest.value();
+        const auto& req = *_currentRequest;
         QPointer<OpenLndChannelModel> self{this};
         _paymentNode->addChannelRequest(req.destination, req.localAmount, req.networkFee)
             .then([self] {

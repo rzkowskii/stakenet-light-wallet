@@ -174,7 +174,7 @@ void OpenConnextChannelModel::checkIfCanOpenChannel()
             if (!_currentRequest) {
                 return;
             }
-            const auto& req = _currentRequest.value();
+            const auto& req = *_currentRequest;
             auto feeAmount = response.first;
             LogCCInfo(General) << "Polled fee amount:" << feeAmount;
             if (feeAmount == 0) {
